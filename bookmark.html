@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>북마크 저장소</title>
+  <title>Bookmark</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
@@ -14,56 +14,14 @@
   </header>
 
   <main class="max-w-3xl mx-auto p-6">
-    <!-- 북마크 추가 폼 -->
-    <section class="bg-white p-4 rounded shadow mb-6 hidden" id="addForm">
-      <h2 class="text-lg font-semibold mb-2">새 북마크 추가</h2>
-      <form id="bookmarkForm" class="space-y-4">
-        <input type="text" placeholder="제목" class="w-full p-2 border rounded" id="title" required />
-        <input type="url" placeholder="URL (https://...)" class="w-full p-2 border rounded" id="url" required />
-        <textarea placeholder="메모 (선택사항)" class="w-full p-2 border rounded" id="memo"></textarea>
-        <div class="text-right">
-          <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">저장</button>
-        </div>
-      </form>
-    </section>
-
     <!-- 북마크 리스트 -->
     <section id="bookmarkList" class="space-y-4">
       <!-- 예시 북마크 -->
       <div class="bg-white p-4 rounded shadow">
-        <a href="https://example.com" target="_blank" class="text-lg font-medium text-blue-600 hover:underline">Example 사이트</a>
-        <p class="text-sm text-gray-600 mt-1">샘플 메모입니다.</p>
+        <a href="https://stocknow.ai/earnings-calendar" target="_blank" class="text-lg font-medium text-blue-600 hover:underline">Example 사이트</a>
+        <p class="text-sm text-gray-600 mt-1">Earning Calendar</p>
       </div>
     </section>
   </main>
-
-  <script>
-    const addBtn = document.querySelector('header button');
-    const addForm = document.getElementById('addForm');
-    const form = document.getElementById('bookmarkForm');
-    const list = document.getElementById('bookmarkList');
-
-    addBtn.addEventListener('click', () => {
-      addForm.classList.toggle('hidden');
-    });
-
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const title = document.getElementById('title').value;
-      const url = document.getElementById('url').value;
-      const memo = document.getElementById('memo').value;
-
-      const card = document.createElement('div');
-      card.className = 'bg-white p-4 rounded shadow';
-      card.innerHTML = `
-        <a href="${url}" target="_blank" class="text-lg font-medium text-blue-600 hover:underline">${title}</a>
-        ${memo ? `<p class="text-sm text-gray-600 mt-1">${memo}</p>` : ''}
-      `;
-
-      list.prepend(card);
-      form.reset();
-      addForm.classList.add('hidden');
-    });
-  </script>
 </body>
 </html>
