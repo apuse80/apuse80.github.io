@@ -1,0 +1,138 @@
+<!-- template.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background-color: #1f1f1f;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        p.description {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #bbbbbb;
+        }
+        .red_font {
+            color: red;
+            font-weight: bold;
+        }
+        .blue_font {
+            color: blue;
+            font-weight: bold;
+        }
+        .green_font {
+            color: green;
+            font-weight: bold;
+        }
+        .yellow_font {
+            color: yellow;
+            font-weight: bold;
+        }
+        .plot {
+            margin-top: 30px;
+            width: 100%;
+            overflow-x: auto;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            p.description {
+                font-size: 1em;
+            }
+        }
+        .link_style {
+            text-decoration: none;
+            color: #bbbbbb;
+        }
+
+        .link_stype:visited {
+            color: #bbbbbb;
+         }
+
+        .link_style:hover {
+            color: #bbbbbb;
+        }
+        /* 플로팅 버튼 스타일 */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 50%;
+            padding: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .scroll-to-top:hover {
+            background-color: #45a049;
+        }
+        .scroll-to-top svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>✅ 선물 옵션 만기일<BR></h2>
+<p class="description">🔹 다음 옵션 만기일: 2025-07-18 (11일 남음)<BR>🔹 다음 선물옵션 동시 만기일: 2025-09-19 (74일 남음)<BR></p>
+<h2>✅ US Stock Index Rebalancing Day <BR></h2>
+<p class="description">🔹 다음 S&P500/Nasdaq 종목 Rebalancing day는 2025-09-19 입니다. 앞으로 74일 남았습니다. <BR></p>
+<h2>✅ Earnings Calendar Reports<BR></h2>
+<h3>🔹 2025-07-03일 실적발표 기업 <BR></h3>
+<p class="description">- 2025-07-03일 실적발표 기업이 없습니다. <BR></p>
+<h3>🔹 2025-07-07일 실적발표 기업 <BR></h3>
+<p class="description">- 2025-07-07일 1 기업이 실적발표를 합니다. 이중 1개 기업은 다음과 같습니다<BR> BNED(Barnes & Noble Education, Inc): Estimate:, Actual:N/A, Surprise: N/A%<BR></p>
+<h3>🔹 2025-07-08일 실적발표 기업 <BR></h3>
+<p class="description">- 2025-07-08일 3 기업이 실적발표를 합니다. 이중 3개 기업은 다음과 같습니다<BR> KRUS(Kura Sushi USA, Inc.): Estimate:(&nbsp;0.02), Actual:N/A, Surprise: N/A%<BR> AEHR(Aehr Test Systems): Estimate:(&nbsp;0.04), Actual:N/A, Surprise: N/A%<BR> SAR(Saratoga Investment Corp): Estimate:&nbsp;0.69, Actual:N/A, Surprise: N/A%<BR></p>
+<h2>✅ List of IPO Companies This Month<BR></h2>
+<p class="description">이 달에 총 4 개의 회사가 상장 예정입니다.<BR> GTERU (Globa Terra Acquisition Corp): Market:NASDAQ Global, Price Range: 10.00, IPO date: 7/09/2025<BR> MSGY (Masonglory Ltd): Market:NASDAQ Capital, Price Range: 4.00-6.00, IPO date: 7/08/2025<BR> TLIH (Ten-League International Holdings Ltd): Market:NASDAQ Capital, Price Range: 4.00-5.00, IPO date: 7/08/2025<BR> MAMK (MaxsMaking Inc.): Market:NASDAQ Capital, Price Range: 4.00-5.00, IPO date: 7/07/2025<BR></p>
+<p class="description"><BR><BR>총 실행시간: 0:0:0</p>
+
+    </div>
+
+    <!-- 플로팅 버튼 -->
+    <button class="scroll-to-top" onclick="scrollToTop()" aria-label="맨 위로">
+    <!-- SVG 아이콘: 업 화살표 -->
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 4L4 12H9V20H15V12H20L12 4Z" fill="white"/>
+    </svg>
+    </button>
+    <script>
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    </script>
+</body>
+</html>
