@@ -1,0 +1,138 @@
+<!-- template.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background-color: #1f1f1f;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        p.description {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #bbbbbb;
+        }
+        .red_font {
+            color: red;
+            font-weight: bold;
+        }
+        .blue_font {
+            color: blue;
+            font-weight: bold;
+        }
+        .green_font {
+            color: green;
+            font-weight: bold;
+        }
+        .yellow_font {
+            color: yellow;
+            font-weight: bold;
+        }
+        .plot {
+            margin-top: 30px;
+            width: 100%;
+            overflow-x: auto;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            p.description {
+                font-size: 1em;
+            }
+        }
+        .link_style {
+            text-decoration: none;
+            color: #bbbbbb;
+        }
+
+        .link_stype:visited {
+            color: #bbbbbb;
+         }
+
+        .link_style:hover {
+            color: #bbbbbb;
+        }
+        /* 플로팅 버튼 스타일 */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 50%;
+            padding: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .scroll-to-top:hover {
+            background-color: #45a049;
+        }
+        .scroll-to-top svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>✅ 선물 옵션 만기일<BR></h2>
+<p class="description">🔹 다음 옵션 만기일: 2025-08-15 (19일 남음)<BR>🔹 다음 선물옵션 동시 만기일: 2025-09-19 (54일 남음)<BR></p>
+<h2>✅ US Stock Index Rebalancing Day <BR></h2>
+<p class="description">🔹 다음 S&P500/Nasdaq 종목 Rebalancing day는 2025-09-19 입니다. 앞으로 54일 남았습니다. <BR></p>
+<h2>✅ Earnings Calendar Reports<BR></h2>
+<h3>🔹 2025-07-25일 실적발표 기업 <BR></h3>
+<p class="description">- 2025-07-25일 47 기업이 실적발표를 합니다. 이중 5개 기업은 다음과 같습니다<BR> HCA(HCA Healthcare, Inc. <A href="https://www.tipranks.com/stocks/HCA" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;6.19, Actual:&nbsp;6.84, Surprise: 10.5%<BR> SCCO(Southern Copper Corporation <A href="https://www.tipranks.com/stocks/SCCO" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;1.06, Actual:&nbsp;1.22, Surprise: N/A%<BR> AON(Aon plc <A href="https://www.tipranks.com/stocks/AON" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;3.40, Actual:&nbsp;3.49, Surprise: 2.65%<BR> E(ENI S.p.A. <A href="https://www.tipranks.com/stocks/E" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;0.67, Actual:&nbsp;0.79, Surprise: 17.91%<BR> NWG(NatWest Group plc <A href="https://www.tipranks.com/stocks/NWG" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:, Actual:&nbsp;0.41, Surprise: N/A%<BR></p>
+<h3>🔹 2025-07-28일 실적발표 기업 <BR></h3>
+<p class="description">- 2025-07-28일 71 기업이 실적발표를 합니다. 이중 5개 기업은 다음과 같습니다<BR> WELL(Welltower Inc. <A href="https://www.tipranks.com/stocks/WELL" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;1.22, Actual:N/A, Surprise: N/A%<BR> WM(Waste Management, Inc. <A href="https://www.tipranks.com/stocks/WM" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;1.88, Actual:N/A, Surprise: N/A%<BR> CDNS(Cadence Design Systems, Inc. <A href="https://www.tipranks.com/stocks/CDNS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;1.22, Actual:N/A, Surprise: N/A%<BR> EPD(Enterprise Products Partners L.P. <A href="https://www.tipranks.com/stocks/EPD" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;0.65, Actual:N/A, Surprise: N/A%<BR> HIG(The Hartford Insurance Group, Inc. <A href="https://www.tipranks.com/stocks/HIG" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;2.77, Actual:N/A, Surprise: N/A%<BR></p>
+<h3>🔹 2025-07-29일 실적발표 기업 <BR></h3>
+<p class="description">- 2025-07-29일 181 기업이 실적발표를 합니다. 이중 5개 기업은 다음과 같습니다<BR> V(Visa Inc. <A href="https://www.tipranks.com/stocks/V" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;2.86, Actual:N/A, Surprise: N/A%<BR> PG(Procter & Gamble Company (The) <A href="https://www.tipranks.com/stocks/PG" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;1.43, Actual:N/A, Surprise: N/A%<BR> UNH(UnitedHealth Group Incorporated <A href="https://www.tipranks.com/stocks/UNH" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;4.84, Actual:N/A, Surprise: N/A%<BR> AZN(Astrazeneca PLC <A href="https://www.tipranks.com/stocks/AZN" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;1.09, Actual:N/A, Surprise: N/A%<BR> MRK(Merck & Company, Inc. <A href="https://www.tipranks.com/stocks/MRK" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;1.99, Actual:N/A, Surprise: N/A%<BR></p>
+<h2>✅ List of IPO Companies This Month<BR></h2>
+<p class="description">이 달에 총 3 개의 회사가 상장 예정입니다.<BR> FIG (Figma, Inc.): Market:NYSE, Price Range: 25.00-28.00, IPO date: 7/31/2025<BR> SI (SHOULDER INNOVATIONS, INC.): Market:NYSE, Price Range: 19.00-21.00, IPO date: 7/31/2025<BR> AMBQ (Ambiq Micro, Inc.): Market:NYSE, Price Range: 22.00-25.00, IPO date: 7/30/2025<BR></p>
+<p class="description"><BR><BR>총 실행시간: 0:0:0</p>
+
+    </div>
+
+    <!-- 플로팅 버튼 -->
+    <button class="scroll-to-top" onclick="scrollToTop()" aria-label="맨 위로">
+    <!-- SVG 아이콘: 업 화살표 -->
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 4L4 12H9V20H15V12H20L12 4Z" fill="white"/>
+    </svg>
+    </button>
+    <script>
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    </script>
+</body>
+</html>
