@@ -1,0 +1,138 @@
+<!-- template.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background-color: #1f1f1f;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        p.description {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #bbbbbb;
+        }
+        .red_font {
+            color: red;
+            font-weight: bold;
+        }
+        .blue_font {
+            color: blue;
+            font-weight: bold;
+        }
+        .green_font {
+            color: green;
+            font-weight: bold;
+        }
+        .yellow_font {
+            color: yellow;
+            font-weight: bold;
+        }
+        .plot {
+            margin-top: 30px;
+            width: 100%;
+            overflow-x: auto;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            p.description {
+                font-size: 1em;
+            }
+        }
+        .link_style {
+            text-decoration: none;
+            color: #bbbbbb;
+        }
+
+        .link_stype:visited {
+            color: #bbbbbb;
+         }
+
+        .link_style:hover {
+            color: #bbbbbb;
+        }
+        /* 플로팅 버튼 스타일 */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 50%;
+            padding: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .scroll-to-top:hover {
+            background-color: #45a049;
+        }
+        .scroll-to-top svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>✅ 선물 옵션 만기일<BR></h2>
+<p class="description">🔹 다음 옵션 만기일: 2025-08-15 (14일 남음)<BR>🔹 다음 선물옵션 동시 만기일: 2025-09-19 (49일 남음)<BR></p>
+<h2>✅ US Stock Index Rebalancing Day <BR></h2>
+<p class="description">🔹 다음 S&P500/Nasdaq 종목 Rebalancing day는 2025-09-19 입니다. 앞으로 49일 남았습니다. <BR></p>
+<h2>✅ Earnings Calendar Reports<BR></h2>
+<h3>🔹 2025-07-31일 실적발표 기업 <BR></h3>
+<p class="description">- 2025-07-31일 300 기업이 실적발표를 합니다. 이중 5개 기업은 다음과 같습니다<BR> AAPL(Apple Inc. <A href="https://www.tipranks.com/stocks/AAPL" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;1.42, Actual:&nbsp;1.57, Surprise: 10.56%<BR> AMZN(Amazon.com, Inc. <A href="https://www.tipranks.com/stocks/AMZN" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;1.33, Actual:&nbsp;1.68, Surprise: 26.32%<BR> MA(Mastercard Incorporated <A href="https://www.tipranks.com/stocks/MA" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;4.05, Actual:&nbsp;4.15, Surprise: 2.47%<BR> ABBV(AbbVie Inc. <A href="https://www.tipranks.com/stocks/ABBV" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;2.89, Actual:&nbsp;2.97, Surprise: 2.77%<BR> SHEL(Shell PLC <A href="https://www.tipranks.com/stocks/SHEL" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;1.13, Actual:&nbsp;1.42, Surprise: 25.66%<BR></p>
+<h3>🔹 2025-08-01일 실적발표 기업 <BR></h3>
+<p class="description">- 2025-08-01일 67 기업이 실적발표를 합니다. 이중 5개 기업은 다음과 같습니다<BR> XOM(Exxon Mobil Corporation <A href="https://www.tipranks.com/stocks/XOM" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;1.49, Actual:N/A, Surprise: N/A%<BR> CVX(Chevron Corporation <A href="https://www.tipranks.com/stocks/CVX" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;1.70, Actual:N/A, Surprise: N/A%<BR> LIN(Linde plc <A href="https://www.tipranks.com/stocks/LIN" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;4.03, Actual:N/A, Surprise: N/A%<BR> ENB(Enbridge Inc <A href="https://www.tipranks.com/stocks/ENB" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;0.41, Actual:N/A, Surprise: N/A%<BR> CL(Colgate-Palmolive Company <A href="https://www.tipranks.com/stocks/CL" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;0.89, Actual:N/A, Surprise: N/A%<BR></p>
+<h3>🔹 2025-08-04일 실적발표 기업 <BR></h3>
+<p class="description">- 2025-08-04일 170 기업이 실적발표를 합니다. 이중 5개 기업은 다음과 같습니다<BR> PLTR(Palantir Technologies Inc. <A href="https://www.tipranks.com/stocks/PLTR" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;0.08, Actual:N/A, Surprise: N/A%<BR> MELI(MercadoLibre, Inc. <A href="https://www.tipranks.com/stocks/MELI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;12.01, Actual:N/A, Surprise: N/A%<BR> VRTX(Vertex Pharmaceuticals Incorporated <A href="https://www.tipranks.com/stocks/VRTX" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;3.74, Actual:N/A, Surprise: N/A%<BR> WMB(Williams Companies, Inc. (The) <A href="https://www.tipranks.com/stocks/WMB" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;0.49, Actual:N/A, Surprise: N/A%<BR> AXON(Axon Enterprise, Inc. <A href="https://www.tipranks.com/stocks/AXON" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A>) : Estimate:&nbsp;0.08, Actual:N/A, Surprise: N/A%<BR></p>
+<h2>✅ List of IPO Companies This Month<BR></h2>
+<p class="description">이 달에 총 4 개의 회사가 상장 예정입니다.<BR> ETS (Elite Express Holding Inc.): Market:NASDAQ Capital, Price Range: 4.00, IPO date: 8/21/2025<BR> QUMSU (Quantumsphere Acquisition Corp): Market:NASDAQ Global, Price Range: 10.00, IPO date: 8/07/2025<BR> FLY (Firefly Aerospace Inc.): Market:NASDAQ Global, Price Range: 35.00-39.00, IPO date: 8/07/2025<BR> CTW (CTW Cayman): Market:NASDAQ Capital, Price Range: 5.00-6.00, IPO date: 8/01/2025<BR></p>
+<p class="description"><BR><BR>총 실행시간: 0:0:0</p>
+
+    </div>
+
+    <!-- 플로팅 버튼 -->
+    <button class="scroll-to-top" onclick="scrollToTop()" aria-label="맨 위로">
+    <!-- SVG 아이콘: 업 화살표 -->
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 4L4 12H9V20H15V12H20L12 4Z" fill="white"/>
+    </svg>
+    </button>
+    <script>
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    </script>
+</body>
+</html>
