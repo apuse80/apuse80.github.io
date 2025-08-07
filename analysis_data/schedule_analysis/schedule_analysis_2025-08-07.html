@@ -1,0 +1,441 @@
+<!-- template.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background-color: #1f1f1f;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        p.description {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #bbbbbb;
+        }
+        .red_font {
+            color: red;
+            font-weight: bold;
+        }
+        .blue_font {
+            color: blue;
+            font-weight: bold;
+        }
+        .green_font {
+            color: green;
+            font-weight: bold;
+        }
+        .yellow_font {
+            color: yellow;
+            font-weight: bold;
+        }
+        .plot {
+            margin-top: 30px;
+            width: 100%;
+            overflow-x: auto;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            p.description {
+                font-size: 1em;
+            }
+        }
+        .link_style {
+            text-decoration: none;
+            color: #bbbbbb;
+        }
+
+        .link_stype:visited {
+            color: #bbbbbb;
+         }
+
+        .link_style:hover {
+            color: #bbbbbb;
+        }
+        /* 플로팅 버튼 스타일 */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 50%;
+            padding: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .scroll-to-top:hover {
+            background-color: #45a049;
+        }
+        .scroll-to-top svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #1e1e1e;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #333;
+            text-align: center;
+        }
+        tr:nth-child(even) {
+            background-color: #2a2a2a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>✅ 선물 옵션 만기일<BR></h2>
+<p class="description">🔹 다음 옵션 만기일: 2025-08-15 (8일 남음)<BR>🔹 다음 선물옵션 동시 만기일: 2025-09-19 (43일 남음)<BR></p>
+<h2>✅ US Stock Index Rebalancing Day <BR></h2>
+<p class="description">🔹 다음 S&P500/Nasdaq 종목 Rebalancing day는 2025-09-19 입니다. 앞으로 43일 남았습니다. <BR></p>
+<h2>✅ Earnings Calendar Reports<BR></h2>
+<h3>🔹 2025-08-06일 실적발표 기업 <BR></h3>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>Name</th>
+      <th>Estimate EPS</th>
+      <th>Actual EPS</th>
+      <th>Surprise</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MCD</td>
+      <td>McDonald's Corporation <A href="https://www.tipranks.com/stocks/MCD" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>$3.15</td>
+      <td>$2.97</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>DIS</td>
+      <td>Walt Disney Company (The) <A href="https://www.tipranks.com/stocks/DIS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>$1.46</td>
+      <td>$1.39</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>NVO</td>
+      <td>Novo Nordisk A/S <A href="https://www.tipranks.com/stocks/NVO" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>$0.93</td>
+      <td>$0.65</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>UBER</td>
+      <td>Uber Technologies, Inc. <A href="https://www.tipranks.com/stocks/UBER" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>$0.62</td>
+      <td>$0.47</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>SHOP</td>
+      <td>Shopify Inc. <A href="https://www.tipranks.com/stocks/SHOP" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>$0.20</td>
+      <td>$0.18</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>SONY</td>
+      <td>Sony Group Corporation <A href="https://www.tipranks.com/stocks/SONY" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>$0.23</td>
+      <td>$0.24</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>APP</td>
+      <td>Applovin Corporation <A href="https://www.tipranks.com/stocks/APP" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>$1.99</td>
+      <td>$0.89</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>DASH</td>
+      <td>DoorDash, Inc. <A href="https://www.tipranks.com/stocks/DASH" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>$0.42</td>
+      <td>($0.38)</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>BAM</td>
+      <td>Brookfield Asset Management <A href="https://www.tipranks.com/stocks/BAM" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>$0.38</td>
+      <td>$0.34</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>TRI</td>
+      <td>Thomson Reuters Corp <A href="https://www.tipranks.com/stocks/TRI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>$0.83</td>
+      <td>$0.85</td>
+      <td>N/A</td>
+    </tr>
+  </tbody>
+</table><h3>🔹 2025-08-07일 실적발표 기업 <BR></h3>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>Name</th>
+      <th>Estimate EPS</th>
+      <th>Actual EPS</th>
+      <th>Surprise</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LLY</td>
+      <td>Eli Lilly and Company <A href="https://www.tipranks.com/stocks/LLY" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>$5.61</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>TM</td>
+      <td>Toyota Motor Corp Ltd Ord <A href="https://www.tipranks.com/stocks/TM" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>$4.67</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>GILD</td>
+      <td>Gilead Sciences, Inc. <A href="https://www.tipranks.com/stocks/GILD" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>$1.95</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>COP</td>
+      <td>ConocoPhillips <A href="https://www.tipranks.com/stocks/COP" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>$1.36</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>BN</td>
+      <td>Brookfield Corporation <A href="https://www.tipranks.com/stocks/BN" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>$0.90</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>CEG</td>
+      <td>Constellation Energy Corporation <A href="https://www.tipranks.com/stocks/CEG" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>$1.83</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>PH</td>
+      <td>Parker-Hannifin Corporation <A href="https://www.tipranks.com/stocks/PH" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>$7.08</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>MSI</td>
+      <td>Motorola Solutions, Inc. <A href="https://www.tipranks.com/stocks/MSI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>$3.06</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>VST</td>
+      <td>Vistra Corp. <A href="https://www.tipranks.com/stocks/VST" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>$0.98</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>CNQ</td>
+      <td>Canadian Natural Resources Limited <A href="https://www.tipranks.com/stocks/CNQ" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>$0.44</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+  </tbody>
+</table><h3>🔹 2025-08-08일 실적발표 기업 <BR></h3>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>Name</th>
+      <th>Estimate EPS</th>
+      <th>Actual EPS</th>
+      <th>Surprise</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>EMA</td>
+      <td>Emera Incorporated <A href="https://www.tipranks.com/stocks/EMA" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>LAMR</td>
+      <td>Lamar Advertising Company <A href="https://www.tipranks.com/stocks/LAMR" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>$2.06</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>PAA</td>
+      <td>Plains All American Pipeline, L.P. <A href="https://www.tipranks.com/stocks/PAA" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>$0.30</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>FRHC</td>
+      <td>Freedom Holding Corp. <A href="https://www.tipranks.com/stocks/FRHC" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>TEM</td>
+      <td>Tempus AI, Inc. <A href="https://www.tipranks.com/stocks/TEM" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>($0.47)</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>ESNT</td>
+      <td>Essent Group Ltd. <A href="https://www.tipranks.com/stocks/ESNT" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>$1.68</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>RNA</td>
+      <td>Avidity Biosciences, Inc. <A href="https://www.tipranks.com/stocks/RNA" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>($0.93)</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>AQN</td>
+      <td>Algonquin Power & Utilities Corp. <A href="https://www.tipranks.com/stocks/AQN" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>$0.04</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>AKRO</td>
+      <td>Akero Therapeutics, Inc. <A href="https://www.tipranks.com/stocks/AKRO" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>($0.95)</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>PAGP</td>
+      <td>Plains GP Holdings, L.P. <A href="https://www.tipranks.com/stocks/PAGP" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>$0.44</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+  </tbody>
+</table><h2>✅ List of IPO Companies This Month<BR></h2>
+<p class="description">이 달에 총 5 개의 회사가 상장 예정입니다.<BR></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>Name</th>
+      <th>Market</th>
+      <th>Price range</th>
+      <th>IPO Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ETS</td>
+      <td>Elite Express Holding Inc.</td>
+      <td>NASDAQ Capital</td>
+      <td>4.00</td>
+      <td>8/21/2025</td>
+    </tr>
+    <tr>
+      <td>MIAX</td>
+      <td>MIAMI INTERNATIONAL HOLDINGS, INC.</td>
+      <td>NYSE</td>
+      <td>19.00-21.00</td>
+      <td>8/14/2025</td>
+    </tr>
+    <tr>
+      <td>BLSH</td>
+      <td>Bullish</td>
+      <td>NYSE</td>
+      <td>28.00-31.00</td>
+      <td>8/13/2025</td>
+    </tr>
+    <tr>
+      <td>HTFL</td>
+      <td>Heartflow, Inc.</td>
+      <td>NASDAQ Global Select</td>
+      <td>15.00-17.00</td>
+      <td>8/08/2025</td>
+    </tr>
+    <tr>
+      <td>FLY</td>
+      <td>Firefly Aerospace Inc.</td>
+      <td>NASDAQ Global</td>
+      <td>41.00-43.00</td>
+      <td>8/07/2025</td>
+    </tr>
+  </tbody>
+</table><p class="description"><BR><BR>총 실행시간: 0:0:0</p>
+
+    </div>
+
+    <!-- 플로팅 버튼 -->
+    <button class="scroll-to-top" onclick="scrollToTop()" aria-label="맨 위로">
+    <!-- SVG 아이콘: 업 화살표 -->
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 4L4 12H9V20H15V12H20L12 4Z" fill="white"/>
+    </svg>
+    </button>
+    <script>
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    </script>
+</body>
+</html>
