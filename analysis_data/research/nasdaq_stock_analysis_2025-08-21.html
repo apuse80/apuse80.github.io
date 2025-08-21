@@ -1,0 +1,1601 @@
+<!-- template.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💻 Nasdaq Analysis and Screening @ 2025-08-21 19:10:03</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background-color: #1f1f1f;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        p.description {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #bbbbbb;
+        }
+        .red_font {
+            color: red;
+            font-weight: bold;
+        }
+        .blue_font {
+            color: blue;
+            font-weight: bold;
+        }
+        .green_font {
+            color: green;
+            font-weight: bold;
+        }
+        .yellow_font {
+            color: yellow;
+            font-weight: bold;
+        }
+        .plot {
+            margin-top: 30px;
+            width: 100%;
+            overflow-x: auto;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            p.description {
+                font-size: 1em;
+            }
+        }
+        .link_style {
+            text-decoration: none;
+            color: #bbbbbb;
+        }
+
+        .link_stype:visited {
+            color: #bbbbbb;
+         }
+
+        .link_style:hover {
+            color: #bbbbbb;
+        }
+        /* 플로팅 버튼 스타일 */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 50%;
+            padding: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .scroll-to-top:hover {
+            background-color: #45a049;
+        }
+        .scroll-to-top svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #1e1e1e;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #333;
+            text-align: center;
+        }
+        tr:nth-child(even) {
+            background-color: #2a2a2a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💻 Nasdaq Analysis and Screening @ 2025-08-21 19:10:03</h1>
+<h2>✅ Result Tickers of Volume:<BR></h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>Name</th>
+      <th>Sector</th>
+      <th>Industry</th>
+      <th>Volume Ratio</th>
+      <th>Price Rate%</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ACNB</td>
+      <td>ACNB Corporation <A href="https://www.tipranks.com/stocks/ACNB" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>Banks - Regional</td>
+      <td>3.184403</td>
+      <td>-2.260639</td>
+    </tr>
+    <tr>
+      <td>ADI</td>
+      <td>Analog Devices, Inc. <A href="https://www.tipranks.com/stocks/ADI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>Semiconductors</td>
+      <td>1.688615</td>
+      <td>4.546797</td>
+    </tr>
+    <tr>
+      <td>AFRI</td>
+      <td>Forafric Global PLC <A href="https://www.tipranks.com/stocks/AFRI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Defensive</td>
+      <td>Farm Products</td>
+      <td>2.038090</td>
+      <td>0.759493</td>
+    </tr>
+    <tr>
+      <td>AIA</td>
+      <td>iShares Asia 50 ETF <A href="https://www.tipranks.com/stocks/AIA" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>8.014020</td>
+      <td>-1.904425</td>
+    </tr>
+    <tr>
+      <td>ALCY</td>
+      <td>Alchemy Investments Acquisition <A href="https://www.tipranks.com/stocks/ALCY" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>Shell Companies</td>
+      <td>12.542662</td>
+      <td>-0.384937</td>
+    </tr>
+    <tr>
+      <td>ALDF</td>
+      <td>Aldel Financial II Inc. <A href="https://www.tipranks.com/stocks/ALDF" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>Shell Companies</td>
+      <td>1.962270</td>
+      <td>0.676326</td>
+    </tr>
+    <tr>
+      <td>ANIK</td>
+      <td>Anika Therapeutics Inc. <A href="https://www.tipranks.com/stocks/ANIK" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>Drug Manufacturers - Specialty & Generic</td>
+      <td>1.583939</td>
+      <td>4.745368</td>
+    </tr>
+    <tr>
+      <td>AOHY</td>
+      <td>Angel Oak High Yield Opportunit <A href="https://www.tipranks.com/stocks/AOHY" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.893016</td>
+      <td>-0.089639</td>
+    </tr>
+    <tr>
+      <td>AOTG</td>
+      <td>AOT Growth and Innovation ETF <A href="https://www.tipranks.com/stocks/AOTG" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>3.808930</td>
+      <td>-1.995952</td>
+    </tr>
+    <tr>
+      <td>ARVR</td>
+      <td>First Trust Indxx Metaverse ETF <A href="https://www.tipranks.com/stocks/ARVR" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>4.021857</td>
+      <td>-2.278991</td>
+    </tr>
+    <tr>
+      <td>ATMC</td>
+      <td>AlphaTime Acquisition Corp <A href="https://www.tipranks.com/stocks/ATMC" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>Shell Companies</td>
+      <td>17.612322</td>
+      <td>-0.251473</td>
+    </tr>
+    <tr>
+      <td>AUMI</td>
+      <td>Themes Gold Miners ETF <A href="https://www.tipranks.com/stocks/AUMI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>4.414492</td>
+      <td>2.002412</td>
+    </tr>
+    <tr>
+      <td>AVNW</td>
+      <td>Aviat Networks, Inc. <A href="https://www.tipranks.com/stocks/AVNW" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>Communication Equipment</td>
+      <td>1.701225</td>
+      <td>-1.630438</td>
+    </tr>
+    <tr>
+      <td>BAFE</td>
+      <td>Brown Advisory Flexible Equity  <A href="https://www.tipranks.com/stocks/BAFE" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>2.038147</td>
+      <td>-0.950675</td>
+    </tr>
+    <tr>
+      <td>BEEZ</td>
+      <td>Honeytree U.S. Equity ETF <A href="https://www.tipranks.com/stocks/BEEZ" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>3.009002</td>
+      <td>-0.415329</td>
+    </tr>
+    <tr>
+      <td>BELT</td>
+      <td>iShares Long-Term U.S. Equity A <A href="https://www.tipranks.com/stocks/BELT" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>3.350043</td>
+      <td>-2.161269</td>
+    </tr>
+    <tr>
+      <td>BILI</td>
+      <td>Bilibili Inc. <A href="https://www.tipranks.com/stocks/BILI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Communication Services</td>
+      <td>Internet Content & Information</td>
+      <td>2.415649</td>
+      <td>-0.251887</td>
+    </tr>
+    <tr>
+      <td>BIOX</td>
+      <td>Bioceres Crop Solutions Corp. <A href="https://www.tipranks.com/stocks/BIOX" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Basic Materials</td>
+      <td>Agricultural Inputs</td>
+      <td>2.445773</td>
+      <td>-1.999998</td>
+    </tr>
+    <tr>
+      <td>BKWO</td>
+      <td>BNY Mellon Women's Opportunitie <A href="https://www.tipranks.com/stocks/BKWO" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>2.319197</td>
+      <td>-1.552987</td>
+    </tr>
+    <tr>
+      <td>BOSC</td>
+      <td>B.O.S. Better Online Solutions <A href="https://www.tipranks.com/stocks/BOSC" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>Communication Equipment</td>
+      <td>2.414103</td>
+      <td>-1.829271</td>
+    </tr>
+    <tr>
+      <td>BRHY</td>
+      <td>iShares High Yield Active ETF <A href="https://www.tipranks.com/stocks/BRHY" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>3.835720</td>
+      <td>-0.143025</td>
+    </tr>
+    <tr>
+      <td>BSCU</td>
+      <td>Invesco BulletShares 2030 Corpo <A href="https://www.tipranks.com/stocks/BSCU" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.634809</td>
+      <td>-0.652049</td>
+    </tr>
+    <tr>
+      <td>BSCX</td>
+      <td>Invesco BulletShares 2033 Corpo <A href="https://www.tipranks.com/stocks/BSCX" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.570469</td>
+      <td>-0.704224</td>
+    </tr>
+    <tr>
+      <td>BSJV</td>
+      <td>Invesco BulletShares 2031 High  <A href="https://www.tipranks.com/stocks/BSJV" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>2.901159</td>
+      <td>-0.827072</td>
+    </tr>
+    <tr>
+      <td>BSMT</td>
+      <td>Invesco BulletShares 2029 Munic <A href="https://www.tipranks.com/stocks/BSMT" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>3.129676</td>
+      <td>-0.284031</td>
+    </tr>
+    <tr>
+      <td>BSVN</td>
+      <td>Bank7 Corp. <A href="https://www.tipranks.com/stocks/BSVN" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>Banks - Regional</td>
+      <td>1.711582</td>
+      <td>0.630840</td>
+    </tr>
+    <tr>
+      <td>CASS</td>
+      <td>Cass Information Systems, Inc <A href="https://www.tipranks.com/stocks/CASS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>Specialty Business Services</td>
+      <td>1.863603</td>
+      <td>-0.604626</td>
+    </tr>
+    <tr>
+      <td>CEPT</td>
+      <td>Cantor Equity Partners II, Inc. <A href="https://www.tipranks.com/stocks/CEPT" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>Shell Companies</td>
+      <td>1.950139</td>
+      <td>-1.590263</td>
+    </tr>
+    <tr>
+      <td>CLOA</td>
+      <td>iShares AAA CLO Active ETF <A href="https://www.tipranks.com/stocks/CLOA" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.696117</td>
+      <td>0.164059</td>
+    </tr>
+    <tr>
+      <td>CMPO</td>
+      <td>CompoSecure, Inc. <A href="https://www.tipranks.com/stocks/CMPO" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>Metal Fabrication</td>
+      <td>1.575999</td>
+      <td>-0.874036</td>
+    </tr>
+    <tr>
+      <td>CNSP</td>
+      <td>CNS Pharmaceuticals, Inc. <A href="https://www.tipranks.com/stocks/CNSP" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>Biotechnology</td>
+      <td>14.633045</td>
+      <td>0.663349</td>
+    </tr>
+    <tr>
+      <td>CODA</td>
+      <td>Coda Octopus Group, Inc. <A href="https://www.tipranks.com/stocks/CODA" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>Aerospace & Defense</td>
+      <td>2.419721</td>
+      <td>-3.162059</td>
+    </tr>
+    <tr>
+      <td>CPHC</td>
+      <td>Canterbury Park Holding Corpora <A href="https://www.tipranks.com/stocks/CPHC" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Cyclical</td>
+      <td>Resorts & Casinos</td>
+      <td>1.679791</td>
+      <td>-2.654872</td>
+    </tr>
+    <tr>
+      <td>CRNX</td>
+      <td>Crinetics Pharmaceuticals, Inc. <A href="https://www.tipranks.com/stocks/CRNX" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>Biotechnology</td>
+      <td>1.704049</td>
+      <td>-0.976763</td>
+    </tr>
+    <tr>
+      <td>CRWS</td>
+      <td>Crown Crafts, Inc. <A href="https://www.tipranks.com/stocks/CRWS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Cyclical</td>
+      <td>Furnishings, Fixtures & Appliances</td>
+      <td>1.671368</td>
+      <td>2.749138</td>
+    </tr>
+    <tr>
+      <td>DRTS</td>
+      <td>Alpha Tau Medical Ltd. <A href="https://www.tipranks.com/stocks/DRTS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>Biotechnology</td>
+      <td>1.621783</td>
+      <td>-1.874998</td>
+    </tr>
+    <tr>
+      <td>DTSQ</td>
+      <td>DT Cloud Star Acquisition Corpo <A href="https://www.tipranks.com/stocks/DTSQ" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>Shell Companies</td>
+      <td>25.342455</td>
+      <td>0.095788</td>
+    </tr>
+    <tr>
+      <td>DVAX</td>
+      <td>Dynavax Technologies Corporatio <A href="https://www.tipranks.com/stocks/DVAX" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>Drug Manufacturers - Specialty & Generic</td>
+      <td>3.012391</td>
+      <td>3.107344</td>
+    </tr>
+    <tr>
+      <td>DWAS</td>
+      <td>Invesco Dorsey Wright SmallCap  <A href="https://www.tipranks.com/stocks/DWAS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.550259</td>
+      <td>-1.223152</td>
+    </tr>
+    <tr>
+      <td>DWSH</td>
+      <td>AdvisorShares Dorsey Wright Sho <A href="https://www.tipranks.com/stocks/DWSH" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>2.520695</td>
+      <td>1.003529</td>
+    </tr>
+    <tr>
+      <td>EBI</td>
+      <td>Longview Advantage ETF <A href="https://www.tipranks.com/stocks/EBI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.793670</td>
+      <td>-1.123836</td>
+    </tr>
+    <tr>
+      <td>EDTK</td>
+      <td>Skillful Craftsman Education Te <A href="https://www.tipranks.com/stocks/EDTK" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Defensive</td>
+      <td>Education & Training Services</td>
+      <td>2.315425</td>
+      <td>0.970873</td>
+    </tr>
+    <tr>
+      <td>EDUC</td>
+      <td>Educational Development Corpora <A href="https://www.tipranks.com/stocks/EDUC" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Communication Services</td>
+      <td>Publishing</td>
+      <td>28.937347</td>
+      <td>-2.777786</td>
+    </tr>
+    <tr>
+      <td>EEFT</td>
+      <td>Euronet Worldwide, Inc. <A href="https://www.tipranks.com/stocks/EEFT" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>Software - Infrastructure</td>
+      <td>1.543240</td>
+      <td>-2.691368</td>
+    </tr>
+    <tr>
+      <td>ELVN</td>
+      <td>Enliven Therapeutics, Inc. <A href="https://www.tipranks.com/stocks/ELVN" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>Biotechnology</td>
+      <td>2.094754</td>
+      <td>0.354070</td>
+    </tr>
+    <tr>
+      <td>EMB</td>
+      <td>iShares J.P. Morgan USD Emergin <A href="https://www.tipranks.com/stocks/EMB" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.758066</td>
+      <td>-0.425851</td>
+    </tr>
+    <tr>
+      <td>EMCB</td>
+      <td>WisdomTree Emerging Markets Cor <A href="https://www.tipranks.com/stocks/EMCB" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.966131</td>
+      <td>-0.277348</td>
+    </tr>
+    <tr>
+      <td>ENDW</td>
+      <td>Cambria Endowment Style ETF <A href="https://www.tipranks.com/stocks/ENDW" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>3.090855</td>
+      <td>-1.101678</td>
+    </tr>
+    <tr>
+      <td>EPRX</td>
+      <td>Eupraxia Pharmaceuticals Inc. <A href="https://www.tipranks.com/stocks/EPRX" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>Biotechnology</td>
+      <td>2.029707</td>
+      <td>-1.420460</td>
+    </tr>
+    <tr>
+      <td>ETEC</td>
+      <td>iShares Breakthrough Environmen <A href="https://www.tipranks.com/stocks/ETEC" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>2.871740</td>
+      <td>2.744732</td>
+    </tr>
+    <tr>
+      <td>EXPO</td>
+      <td>Exponent, Inc. <A href="https://www.tipranks.com/stocks/EXPO" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>Engineering & Construction</td>
+      <td>1.570439</td>
+      <td>-0.268848</td>
+    </tr>
+    <tr>
+      <td>FACT</td>
+      <td>FACT II Acquisition Corp. <A href="https://www.tipranks.com/stocks/FACT" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>2.718131</td>
+      <td>-0.193991</td>
+    </tr>
+    <tr>
+      <td>FEMS</td>
+      <td>First Trust Emerging Markets Sm <A href="https://www.tipranks.com/stocks/FEMS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>3.988476</td>
+      <td>0.304595</td>
+    </tr>
+    <tr>
+      <td>FER</td>
+      <td>Ferrovial SE <A href="https://www.tipranks.com/stocks/FER" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>Engineering & Construction</td>
+      <td>1.906725</td>
+      <td>0.677034</td>
+    </tr>
+    <tr>
+      <td>FICS</td>
+      <td>First Trust International Devel <A href="https://www.tipranks.com/stocks/FICS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.772575</td>
+      <td>0.598473</td>
+    </tr>
+    <tr>
+      <td>FID</td>
+      <td>First Trust S&P International D <A href="https://www.tipranks.com/stocks/FID" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.727650</td>
+      <td>0.186926</td>
+    </tr>
+    <tr>
+      <td>FLDB</td>
+      <td>Fidelity Low Duration Bond ETF <A href="https://www.tipranks.com/stocks/FLDB" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.794311</td>
+      <td>0.098889</td>
+    </tr>
+    <tr>
+      <td>FMFC</td>
+      <td>Kandal M Venture Limited <A href="https://www.tipranks.com/stocks/FMFC" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Cyclical</td>
+      <td>Footwear & Accessories</td>
+      <td>1.710770</td>
+      <td>4.190751</td>
+    </tr>
+    <tr>
+      <td>FMUB</td>
+      <td>Fidelity Municipal Bond Opportu <A href="https://www.tipranks.com/stocks/FMUB" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>10.769659</td>
+      <td>-0.030071</td>
+    </tr>
+    <tr>
+      <td>FNX</td>
+      <td>First Trust Mid Cap Core AlphaD <A href="https://www.tipranks.com/stocks/FNX" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>2.942706</td>
+      <td>-0.904796</td>
+    </tr>
+    <tr>
+      <td>FRD</td>
+      <td>Friedman Industries Inc. <A href="https://www.tipranks.com/stocks/FRD" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Basic Materials</td>
+      <td>Steel</td>
+      <td>1.667781</td>
+      <td>0.344034</td>
+    </tr>
+    <tr>
+      <td>FSHP</td>
+      <td>Flag Ship Acquisition Corp. <A href="https://www.tipranks.com/stocks/FSHP" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>Shell Companies</td>
+      <td>1.688714</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <td>FTHI</td>
+      <td>First Trust BuyWrite Income ETF <A href="https://www.tipranks.com/stocks/FTHI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.608193</td>
+      <td>-1.756640</td>
+    </tr>
+    <tr>
+      <td>FYC</td>
+      <td>First Trust Small Cap Growth Al <A href="https://www.tipranks.com/stocks/FYC" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>2.122500</td>
+      <td>-0.496607</td>
+    </tr>
+    <tr>
+      <td>GASS</td>
+      <td>StealthGas, Inc. <A href="https://www.tipranks.com/stocks/GASS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>Marine Shipping</td>
+      <td>2.002836</td>
+      <td>3.165472</td>
+    </tr>
+    <tr>
+      <td>GECC</td>
+      <td>Great Elm Capital Corp. <A href="https://www.tipranks.com/stocks/GECC" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>Asset Management</td>
+      <td>2.283253</td>
+      <td>1.083031</td>
+    </tr>
+    <tr>
+      <td>GEME</td>
+      <td>Pacific North of South EM Equit <A href="https://www.tipranks.com/stocks/GEME" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>9.411582</td>
+      <td>-1.123016</td>
+    </tr>
+    <tr>
+      <td>GLOW</td>
+      <td>VictoryShares WestEnd Global Eq <A href="https://www.tipranks.com/stocks/GLOW" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>6.395199</td>
+      <td>-0.917947</td>
+    </tr>
+    <tr>
+      <td>GNOM</td>
+      <td>Global X Genomics & Biotechnolo <A href="https://www.tipranks.com/stocks/GNOM" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.803401</td>
+      <td>-0.506152</td>
+    </tr>
+    <tr>
+      <td>GTX</td>
+      <td>Garrett Motion Inc. <A href="https://www.tipranks.com/stocks/GTX" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Cyclical</td>
+      <td>Auto Parts</td>
+      <td>3.683244</td>
+      <td>1.630435</td>
+    </tr>
+    <tr>
+      <td>HBCP</td>
+      <td>Home Bancorp, Inc. <A href="https://www.tipranks.com/stocks/HBCP" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>Banks - Regional</td>
+      <td>1.560769</td>
+      <td>-0.411217</td>
+    </tr>
+    <tr>
+      <td>HRTS</td>
+      <td>Tema Heart & Health ETF <A href="https://www.tipranks.com/stocks/HRTS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>3.374683</td>
+      <td>2.550793</td>
+    </tr>
+    <tr>
+      <td>HSAI</td>
+      <td>Hesai Group <A href="https://www.tipranks.com/stocks/HSAI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Cyclical</td>
+      <td>Auto Parts</td>
+      <td>1.779071</td>
+      <td>-1.114924</td>
+    </tr>
+    <tr>
+      <td>HTZ</td>
+      <td>Hertz Global Holdings, Inc <A href="https://www.tipranks.com/stocks/HTZ" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>Rental & Leasing Services</td>
+      <td>1.513075</td>
+      <td>2.480918</td>
+    </tr>
+    <tr>
+      <td>IBGB</td>
+      <td>iShares iBonds Dec 2045 Term Tr <A href="https://www.tipranks.com/stocks/IBGB" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>3.268013</td>
+      <td>-0.552352</td>
+    </tr>
+    <tr>
+      <td>IBGL</td>
+      <td>iShares iBonds Dec 2055 Term Tr <A href="https://www.tipranks.com/stocks/IBGL" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>13.720811</td>
+      <td>-0.621456</td>
+    </tr>
+    <tr>
+      <td>IBTH</td>
+      <td>iShares iBonds Dec 2027 Term Tr <A href="https://www.tipranks.com/stocks/IBTH" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>2.093283</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <td>IBTK</td>
+      <td>iShares iBonds Dec 2030 Term Tr <A href="https://www.tipranks.com/stocks/IBTK" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>2.600637</td>
+      <td>-0.101182</td>
+    </tr>
+    <tr>
+      <td>IBTP</td>
+      <td>iShares iBonds Dec 2034 Term Tr <A href="https://www.tipranks.com/stocks/IBTP" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>3.480494</td>
+      <td>-0.232289</td>
+    </tr>
+    <tr>
+      <td>ICLN</td>
+      <td>iShares Global Clean Energy ETF <A href="https://www.tipranks.com/stocks/ICLN" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.772749</td>
+      <td>3.806738</td>
+    </tr>
+    <tr>
+      <td>IMMX</td>
+      <td>Immix Biopharma, Inc. <A href="https://www.tipranks.com/stocks/IMMX" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>Biotechnology</td>
+      <td>2.079080</td>
+      <td>4.109585</td>
+    </tr>
+    <tr>
+      <td>INDH</td>
+      <td>WisdomTree India Hedged Equity  <A href="https://www.tipranks.com/stocks/INDH" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>2.072862</td>
+      <td>1.917120</td>
+    </tr>
+    <tr>
+      <td>INFR</td>
+      <td>ClearBridge Sustainable Infrast <A href="https://www.tipranks.com/stocks/INFR" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>14.110723</td>
+      <td>0.029161</td>
+    </tr>
+    <tr>
+      <td>IPCX</td>
+      <td>Inflection Point Acquisition Co <A href="https://www.tipranks.com/stocks/IPCX" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>Shell Companies</td>
+      <td>1.880640</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <td>IPKW</td>
+      <td>Invesco International BuyBack A <A href="https://www.tipranks.com/stocks/IPKW" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.587108</td>
+      <td>-0.136587</td>
+    </tr>
+    <tr>
+      <td>IROQ</td>
+      <td>IF Bancorp, Inc. <A href="https://www.tipranks.com/stocks/IROQ" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>Banks - Regional</td>
+      <td>1.838616</td>
+      <td>0.399203</td>
+    </tr>
+    <tr>
+      <td>ISHG</td>
+      <td>iShares 1-3 Year International  <A href="https://www.tipranks.com/stocks/ISHG" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.993959</td>
+      <td>-0.436857</td>
+    </tr>
+    <tr>
+      <td>IVA</td>
+      <td>Inventiva S.A. - American Depos <A href="https://www.tipranks.com/stocks/IVA" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>Biotechnology</td>
+      <td>1.520856</td>
+      <td>0.947878</td>
+    </tr>
+    <tr>
+      <td>JBDI</td>
+      <td>JBDI Holdings Limited <A href="https://www.tipranks.com/stocks/JBDI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Cyclical</td>
+      <td>Specialty Retail</td>
+      <td>2.088651</td>
+      <td>4.892162</td>
+    </tr>
+    <tr>
+      <td>JKHY</td>
+      <td>Jack Henry & Associates, Inc. <A href="https://www.tipranks.com/stocks/JKHY" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>Information Technology Services</td>
+      <td>1.546342</td>
+      <td>2.518050</td>
+    </tr>
+    <tr>
+      <td>KEAT</td>
+      <td>Keating Active ETF <A href="https://www.tipranks.com/stocks/KEAT" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>2.070344</td>
+      <td>1.944554</td>
+    </tr>
+    <tr>
+      <td>KQQQ</td>
+      <td>Kurv Technology Titans Select E <A href="https://www.tipranks.com/stocks/KQQQ" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>3.438450</td>
+      <td>-3.357012</td>
+    </tr>
+    <tr>
+      <td>LCCC</td>
+      <td>Lakeshore Acquisition III Corp. <A href="https://www.tipranks.com/stocks/LCCC" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>Shell Companies</td>
+      <td>4.841121</td>
+      <td>0.199208</td>
+    </tr>
+    <tr>
+      <td>LPTH</td>
+      <td>LightPath Technologies, Inc. <A href="https://www.tipranks.com/stocks/LPTH" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>Electronic Components</td>
+      <td>3.257305</td>
+      <td>4.120875</td>
+    </tr>
+    <tr>
+      <td>LVTX</td>
+      <td>LAVA Therapeutics N.V. <A href="https://www.tipranks.com/stocks/LVTX" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>Biotechnology</td>
+      <td>1.723820</td>
+      <td>0.649350</td>
+    </tr>
+    <tr>
+      <td>LXEH</td>
+      <td>Lixiang Education Holding Co.,  <A href="https://www.tipranks.com/stocks/LXEH" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Defensive</td>
+      <td>Education & Training Services</td>
+      <td>3.624075</td>
+      <td>4.761910</td>
+    </tr>
+    <tr>
+      <td>MBBC</td>
+      <td>Marathon Bancorp, Inc. <A href="https://www.tipranks.com/stocks/MBBC" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>Banks - Regional</td>
+      <td>2.837429</td>
+      <td>1.954783</td>
+    </tr>
+    <tr>
+      <td>MGYR</td>
+      <td>Magyar Bancorp, Inc. <A href="https://www.tipranks.com/stocks/MGYR" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>Banks - Regional</td>
+      <td>1.812938</td>
+      <td>-1.887871</td>
+    </tr>
+    <tr>
+      <td>MPAA</td>
+      <td>Motorcar Parts of America, Inc. <A href="https://www.tipranks.com/stocks/MPAA" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Cyclical</td>
+      <td>Auto Parts</td>
+      <td>2.814424</td>
+      <td>-1.690139</td>
+    </tr>
+    <tr>
+      <td>MTLS</td>
+      <td>Materialise NV <A href="https://www.tipranks.com/stocks/MTLS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>Software - Application</td>
+      <td>1.551992</td>
+      <td>-3.281846</td>
+    </tr>
+    <tr>
+      <td>MZTI</td>
+      <td>The Marzetti Company <A href="https://www.tipranks.com/stocks/MZTI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Defensive</td>
+      <td>Packaged Foods</td>
+      <td>2.441387</td>
+      <td>-1.896781</td>
+    </tr>
+    <tr>
+      <td>NATR</td>
+      <td>Nature's Sunshine Products, Inc <A href="https://www.tipranks.com/stocks/NATR" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Defensive</td>
+      <td>Packaged Foods</td>
+      <td>1.980669</td>
+      <td>0.361879</td>
+    </tr>
+    <tr>
+      <td>NCPL</td>
+      <td>Netcapital Inc. <A href="https://www.tipranks.com/stocks/NCPL" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>Capital Markets</td>
+      <td>1.665416</td>
+      <td>-0.980391</td>
+    </tr>
+    <tr>
+      <td>NDSN</td>
+      <td>Nordson Corporation <A href="https://www.tipranks.com/stocks/NDSN" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>Specialty Industrial Machinery</td>
+      <td>4.489603</td>
+      <td>1.247579</td>
+    </tr>
+    <tr>
+      <td>NFTY</td>
+      <td>First Trust India Nifty 50 Equa <A href="https://www.tipranks.com/stocks/NFTY" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>3.151410</td>
+      <td>2.179627</td>
+    </tr>
+    <tr>
+      <td>NODK</td>
+      <td>NI Holdings, Inc. <A href="https://www.tipranks.com/stocks/NODK" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>Insurance - Property & Casualty</td>
+      <td>1.909828</td>
+      <td>-0.956174</td>
+    </tr>
+    <tr>
+      <td>NVA</td>
+      <td>Nova Minerals Limited <A href="https://www.tipranks.com/stocks/NVA" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Basic Materials</td>
+      <td>Other Industrial Metals & Mining</td>
+      <td>3.443235</td>
+      <td>-2.482267</td>
+    </tr>
+    <tr>
+      <td>NWE</td>
+      <td>NorthWestern Energy Group, Inc. <A href="https://www.tipranks.com/stocks/NWE" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Utilities</td>
+      <td>Utilities - Regulated Electric</td>
+      <td>1.588586</td>
+      <td>1.837971</td>
+    </tr>
+    <tr>
+      <td>NZUS</td>
+      <td>SPDR MSCI USA Climate Paris Ali <A href="https://www.tipranks.com/stocks/NZUS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.927234</td>
+      <td>-1.717478</td>
+    </tr>
+    <tr>
+      <td>OACC</td>
+      <td>Oaktree Acquisition Corp. III L <A href="https://www.tipranks.com/stocks/OACC" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>Shell Companies</td>
+      <td>13.936085</td>
+      <td>-0.476563</td>
+    </tr>
+    <tr>
+      <td>ODYS</td>
+      <td>Odysight.ai Inc. <A href="https://www.tipranks.com/stocks/ODYS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>Scientific & Technical Instruments</td>
+      <td>1.957565</td>
+      <td>-4.325702</td>
+    </tr>
+    <tr>
+      <td>OTLK</td>
+      <td>Outlook Therapeutics, Inc. <A href="https://www.tipranks.com/stocks/OTLK" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>Biotechnology</td>
+      <td>2.746155</td>
+      <td>-0.823044</td>
+    </tr>
+    <tr>
+      <td>PAGP</td>
+      <td>Plains GP Holdings, L.P. <A href="https://www.tipranks.com/stocks/PAGP" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Energy</td>
+      <td>Oil & Gas Midstream</td>
+      <td>1.593311</td>
+      <td>-0.734905</td>
+    </tr>
+    <tr>
+      <td>PAMT</td>
+      <td>PAMT CORP <A href="https://www.tipranks.com/stocks/PAMT" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>Trucking</td>
+      <td>2.492812</td>
+      <td>-4.847536</td>
+    </tr>
+    <tr>
+      <td>PCB</td>
+      <td>PCB Bancorp <A href="https://www.tipranks.com/stocks/PCB" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>Banks - Regional</td>
+      <td>1.534237</td>
+      <td>-1.426597</td>
+    </tr>
+    <tr>
+      <td>PFI</td>
+      <td>Invesco Dorsey Wright Financial <A href="https://www.tipranks.com/stocks/PFI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>2.640439</td>
+      <td>-1.314337</td>
+    </tr>
+    <tr>
+      <td>PID</td>
+      <td>Invesco International Dividend  <A href="https://www.tipranks.com/stocks/PID" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.680053</td>
+      <td>0.886358</td>
+    </tr>
+    <tr>
+      <td>PIE</td>
+      <td>Invesco Dorsey Wright Emerging  <A href="https://www.tipranks.com/stocks/PIE" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>3.358329</td>
+      <td>1.341587</td>
+    </tr>
+    <tr>
+      <td>PMBS</td>
+      <td>PIMCO Mortgage-Backed Securitie <A href="https://www.tipranks.com/stocks/PMBS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>13.551112</td>
+      <td>-0.102612</td>
+    </tr>
+    <tr>
+      <td>PQJA</td>
+      <td>PGIM Nasdaq-100 Buffer 12 ETF - <A href="https://www.tipranks.com/stocks/PQJA" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>12.367491</td>
+      <td>-1.403802</td>
+    </tr>
+    <tr>
+      <td>PQOC</td>
+      <td>PGIM Nasdaq-100 Buffer 12 ETF - <A href="https://www.tipranks.com/stocks/PQOC" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>2.442201</td>
+      <td>-1.212874</td>
+    </tr>
+    <tr>
+      <td>PRPO</td>
+      <td>Precipio, Inc. <A href="https://www.tipranks.com/stocks/PRPO" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>Diagnostics & Research</td>
+      <td>1.682346</td>
+      <td>-1.427601</td>
+    </tr>
+    <tr>
+      <td>PRTG</td>
+      <td>Portage Biotech Inc. <A href="https://www.tipranks.com/stocks/PRTG" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>Biotechnology</td>
+      <td>1.746388</td>
+      <td>0.681812</td>
+    </tr>
+    <tr>
+      <td>PSHG</td>
+      <td>Performance Shipping Inc. <A href="https://www.tipranks.com/stocks/PSHG" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>2.253737</td>
+      <td>3.743318</td>
+    </tr>
+    <tr>
+      <td>PTEC</td>
+      <td>Global X PropTech ETF <A href="https://www.tipranks.com/stocks/PTEC" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.534854</td>
+      <td>-0.098508</td>
+    </tr>
+    <tr>
+      <td>PUBM</td>
+      <td>PubMatic, Inc. <A href="https://www.tipranks.com/stocks/PUBM" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>Software - Application</td>
+      <td>1.791412</td>
+      <td>2.657008</td>
+    </tr>
+    <tr>
+      <td>PWRD</td>
+      <td>TCW Transform Systems ETF <A href="https://www.tipranks.com/stocks/PWRD" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>2.892769</td>
+      <td>-2.641520</td>
+    </tr>
+    <tr>
+      <td>QMID</td>
+      <td>WisdomTree U.S. MidCap Quality  <A href="https://www.tipranks.com/stocks/QMID" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.828646</td>
+      <td>-0.337527</td>
+    </tr>
+    <tr>
+      <td>QNXT</td>
+      <td>iShares Nasdaq-100 ex Top 30 ET <A href="https://www.tipranks.com/stocks/QNXT" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.529338</td>
+      <td>-1.933544</td>
+    </tr>
+    <tr>
+      <td>QQHG</td>
+      <td>Invesco QQQ Hedged Advantage ET <A href="https://www.tipranks.com/stocks/QQHG" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>5.381990</td>
+      <td>-2.124212</td>
+    </tr>
+    <tr>
+      <td>QQQE</td>
+      <td>Direxion NASDAQ-100 Equal Weigh <A href="https://www.tipranks.com/stocks/QQQE" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>2.742492</td>
+      <td>-1.389588</td>
+    </tr>
+    <tr>
+      <td>QQQM</td>
+      <td>Invesco NASDAQ 100 ETF <A href="https://www.tipranks.com/stocks/QQQM" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.663104</td>
+      <td>-2.838354</td>
+    </tr>
+    <tr>
+      <td>QSIX</td>
+      <td>Pacer Metaurus Nasdaq 100 Divid <A href="https://www.tipranks.com/stocks/QSIX" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.590896</td>
+      <td>-2.696904</td>
+    </tr>
+    <tr>
+      <td>RAAQ</td>
+      <td>Real Asset Acquisition Corp. <A href="https://www.tipranks.com/stocks/RAAQ" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>Shell Companies</td>
+      <td>10.327433</td>
+      <td>-0.098816</td>
+    </tr>
+    <tr>
+      <td>RAY</td>
+      <td>Raytech Holding Limited <A href="https://www.tipranks.com/stocks/RAY" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Defensive</td>
+      <td>Household & Personal Products</td>
+      <td>4.497895</td>
+      <td>-4.255315</td>
+    </tr>
+    <tr>
+      <td>RDI</td>
+      <td>Reading International Inc <A href="https://www.tipranks.com/stocks/RDI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Communication Services</td>
+      <td>Entertainment</td>
+      <td>2.068702</td>
+      <td>-4.166671</td>
+    </tr>
+    <tr>
+      <td>REAL</td>
+      <td>The RealReal, Inc. <A href="https://www.tipranks.com/stocks/REAL" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Cyclical</td>
+      <td>Luxury Goods</td>
+      <td>1.856130</td>
+      <td>-3.176620</td>
+    </tr>
+    <tr>
+      <td>RGS</td>
+      <td>Regis Corporation <A href="https://www.tipranks.com/stocks/RGS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Cyclical</td>
+      <td>Personal Services</td>
+      <td>1.544770</td>
+      <td>-1.401872</td>
+    </tr>
+    <tr>
+      <td>ROP</td>
+      <td>Roper Technologies, Inc. <A href="https://www.tipranks.com/stocks/ROP" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>Software - Application</td>
+      <td>1.755459</td>
+      <td>0.377168</td>
+    </tr>
+    <tr>
+      <td>ROST</td>
+      <td>Ross Stores, Inc. <A href="https://www.tipranks.com/stocks/ROST" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Cyclical</td>
+      <td>Apparel Retail</td>
+      <td>1.823779</td>
+      <td>-1.194198</td>
+    </tr>
+    <tr>
+      <td>RTXG</td>
+      <td>Leverage Shares 2X Long RTX Dai <A href="https://www.tipranks.com/stocks/RTXG" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.617965</td>
+      <td>2.065115</td>
+    </tr>
+    <tr>
+      <td>SDSI</td>
+      <td>American Century Short Duration <A href="https://www.tipranks.com/stocks/SDSI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>3.060305</td>
+      <td>0.165384</td>
+    </tr>
+    <tr>
+      <td>SFST</td>
+      <td>Southern First Bancshares, Inc. <A href="https://www.tipranks.com/stocks/SFST" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>Banks - Regional</td>
+      <td>1.594005</td>
+      <td>0.047227</td>
+    </tr>
+    <tr>
+      <td>SRDX</td>
+      <td>Surmodics, Inc. <A href="https://www.tipranks.com/stocks/SRDX" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>Medical Devices</td>
+      <td>2.410764</td>
+      <td>-4.117958</td>
+    </tr>
+    <tr>
+      <td>SRZN</td>
+      <td>Surrozen, Inc. <A href="https://www.tipranks.com/stocks/SRZN" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>Biotechnology</td>
+      <td>3.469582</td>
+      <td>4.608295</td>
+    </tr>
+    <tr>
+      <td>STRR</td>
+      <td>Star Equity Holdings, Inc. <A href="https://www.tipranks.com/stocks/STRR" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>Diagnostics & Research</td>
+      <td>23.087771</td>
+      <td>-2.739723</td>
+    </tr>
+    <tr>
+      <td>SUSC</td>
+      <td>iShares ESG Aware USD Corporate <A href="https://www.tipranks.com/stocks/SUSC" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.625194</td>
+      <td>-0.386599</td>
+    </tr>
+    <tr>
+      <td>SWVL</td>
+      <td>Swvl Holdings Corp <A href="https://www.tipranks.com/stocks/SWVL" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>Railroads</td>
+      <td>2.503355</td>
+      <td>-0.834970</td>
+    </tr>
+    <tr>
+      <td>TACT</td>
+      <td>TransAct Technologies Incorpora <A href="https://www.tipranks.com/stocks/TACT" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>Computer Hardware</td>
+      <td>1.553148</td>
+      <td>1.192882</td>
+    </tr>
+    <tr>
+      <td>TAXE</td>
+      <td>Intermediate Municipal Income E <A href="https://www.tipranks.com/stocks/TAXE" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>3.533794</td>
+      <td>0.040049</td>
+    </tr>
+    <tr>
+      <td>TDAC</td>
+      <td>Translational Development Acqui <A href="https://www.tipranks.com/stocks/TDAC" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>Shell Companies</td>
+      <td>15.213101</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <td>TDI</td>
+      <td>Touchstone Dynamic Internationa <A href="https://www.tipranks.com/stocks/TDI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.734602</td>
+      <td>0.197196</td>
+    </tr>
+    <tr>
+      <td>THCH</td>
+      <td>TH International Limited <A href="https://www.tipranks.com/stocks/THCH" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Cyclical</td>
+      <td>Restaurants</td>
+      <td>2.283385</td>
+      <td>-4.061896</td>
+    </tr>
+    <tr>
+      <td>THMZ</td>
+      <td>Lazard Equity Megatrends ETF <A href="https://www.tipranks.com/stocks/THMZ" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.834826</td>
+      <td>-1.382807</td>
+    </tr>
+    <tr>
+      <td>TRMD</td>
+      <td>TORM plc <A href="https://www.tipranks.com/stocks/TRMD" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Energy</td>
+      <td>Oil & Gas Midstream</td>
+      <td>1.571949</td>
+      <td>3.660322</td>
+    </tr>
+    <tr>
+      <td>TSPY</td>
+      <td>TappAlpha SPY Growth & Daily In <A href="https://www.tipranks.com/stocks/TSPY" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.566542</td>
+      <td>-0.926670</td>
+    </tr>
+    <tr>
+      <td>TTNP</td>
+      <td>Titan Pharmaceuticals, Inc. <A href="https://www.tipranks.com/stocks/TTNP" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>Biotechnology</td>
+      <td>2.488178</td>
+      <td>1.030932</td>
+    </tr>
+    <tr>
+      <td>TXSS</td>
+      <td>Texas Capital Texas Small Cap E <A href="https://www.tipranks.com/stocks/TXSS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>2.813282</td>
+      <td>-0.385384</td>
+    </tr>
+    <tr>
+      <td>TXUE</td>
+      <td>Thornburg International Equity  <A href="https://www.tipranks.com/stocks/TXUE" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.889225</td>
+      <td>-0.345564</td>
+    </tr>
+    <tr>
+      <td>UBCP</td>
+      <td>United Bancorp, Inc. <A href="https://www.tipranks.com/stocks/UBCP" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>Banks - Regional</td>
+      <td>1.833644</td>
+      <td>0.704228</td>
+    </tr>
+    <tr>
+      <td>UIVM</td>
+      <td>VictoryShares International Val <A href="https://www.tipranks.com/stocks/UIVM" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>3.071480</td>
+      <td>0.120691</td>
+    </tr>
+    <tr>
+      <td>ULBI</td>
+      <td>Ultralife Corporation <A href="https://www.tipranks.com/stocks/ULBI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>Electrical Equipment & Parts</td>
+      <td>1.504245</td>
+      <td>0.150372</td>
+    </tr>
+    <tr>
+      <td>USAU</td>
+      <td>U.S. Gold Corp. <A href="https://www.tipranks.com/stocks/USAU" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Basic Materials</td>
+      <td>Gold</td>
+      <td>2.244072</td>
+      <td>-0.599826</td>
+    </tr>
+    <tr>
+      <td>USDX</td>
+      <td>SGI Enhanced Core ETF <A href="https://www.tipranks.com/stocks/USDX" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.931726</td>
+      <td>0.116711</td>
+    </tr>
+    <tr>
+      <td>USGO</td>
+      <td>U.S. GoldMining Inc. <A href="https://www.tipranks.com/stocks/USGO" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Basic Materials</td>
+      <td>Other Industrial Metals & Mining</td>
+      <td>2.857701</td>
+      <td>0.886072</td>
+    </tr>
+    <tr>
+      <td>USMC</td>
+      <td>Principal U.S. Mega-Cap ETF <A href="https://www.tipranks.com/stocks/USMC" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.690507</td>
+      <td>-0.982920</td>
+    </tr>
+    <tr>
+      <td>VABK</td>
+      <td>Virginia National Bankshares Co <A href="https://www.tipranks.com/stocks/VABK" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>Banks - Regional</td>
+      <td>2.920295</td>
+      <td>1.629067</td>
+    </tr>
+    <tr>
+      <td>VALU</td>
+      <td>Value Line, Inc. <A href="https://www.tipranks.com/stocks/VALU" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>Financial Data & Stock Exchanges</td>
+      <td>1.509110</td>
+      <td>-2.207788</td>
+    </tr>
+    <tr>
+      <td>VGUS</td>
+      <td>Vanguard Ultra-Short Treasury E <A href="https://www.tipranks.com/stocks/VGUS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>2.456572</td>
+      <td>0.066260</td>
+    </tr>
+    <tr>
+      <td>VONE</td>
+      <td>Vanguard Russell 1000 ETF <A href="https://www.tipranks.com/stocks/VONE" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>1.697162</td>
+      <td>-1.519528</td>
+    </tr>
+    <tr>
+      <td>VSMV</td>
+      <td>VictoryShares US Multi-Factor M <A href="https://www.tipranks.com/stocks/VSMV" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>2.195032</td>
+      <td>0.178820</td>
+    </tr>
+    <tr>
+      <td>WBA</td>
+      <td>Walgreens Boots Alliance, Inc. <A href="https://www.tipranks.com/stocks/WBA" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>Pharmaceutical Retailers</td>
+      <td>1.851209</td>
+      <td>1.245844</td>
+    </tr>
+    <tr>
+      <td>WBND</td>
+      <td>Western Asset Total Return ETF <A href="https://www.tipranks.com/stocks/WBND" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td></td>
+      <td></td>
+      <td>8.342476</td>
+      <td>-0.049506</td>
+    </tr>
+    <tr>
+      <td>WDAY</td>
+      <td>Workday, Inc. <A href="https://www.tipranks.com/stocks/WDAY" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>Software - Application</td>
+      <td>2.063681</td>
+      <td>2.550470</td>
+    </tr>
+    <tr>
+      <td>WEYS</td>
+      <td>Weyco Group, Inc. <A href="https://www.tipranks.com/stocks/WEYS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Cyclical</td>
+      <td>Footwear & Accessories</td>
+      <td>1.613473</td>
+      <td>-4.206692</td>
+    </tr>
+    <tr>
+      <td>WFCF</td>
+      <td>Where Food Comes From, Inc. <A href="https://www.tipranks.com/stocks/WFCF" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>Specialty Business Services</td>
+      <td>4.784123</td>
+      <td>0.448432</td>
+    </tr>
+    <tr>
+      <td>WYHG</td>
+      <td>Wing Yip Food Holdings Group Li <A href="https://www.tipranks.com/stocks/WYHG" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Defensive</td>
+      <td>Packaged Foods</td>
+      <td>2.093893</td>
+      <td>-0.675675</td>
+    </tr>
+    <tr>
+      <td>XCH</td>
+      <td>XCHG Limited <A href="https://www.tipranks.com/stocks/XCH" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>Specialty Industrial Machinery</td>
+      <td>1.644893</td>
+      <td>-4.220939</td>
+    </tr>
+    <tr>
+      <td>XOMA</td>
+      <td>XOMA Royalty Corporation <A href="https://www.tipranks.com/stocks/XOMA" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>Biotechnology</td>
+      <td>1.712923</td>
+      <td>3.672048</td>
+    </tr>
+    <tr>
+      <td>YHNA</td>
+      <td>YHN Acquisition I Limited <A href="https://www.tipranks.com/stocks/YHNA" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>Shell Companies</td>
+      <td>2.161338</td>
+      <td>0.095788</td>
+    </tr>
+    <tr>
+      <td>ZM</td>
+      <td>Zoom Communications, Inc. <A href="https://www.tipranks.com/stocks/ZM" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>Software - Application</td>
+      <td>2.172436</td>
+      <td>1.822986</td>
+    </tr>
+  </tbody>
+</table><p class="description"><BR><BR>총 실행시간: 0:35:5</p>
+
+    </div>
+
+    <!-- 플로팅 버튼 -->
+    <button class="scroll-to-top" onclick="scrollToTop()" aria-label="맨 위로">
+    <!-- SVG 아이콘: 업 화살표 -->
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 4L4 12H9V20H15V12H20L12 4Z" fill="white"/>
+    </svg>
+    </button>
+    <script>
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    </script>
+</body>
+</html>
