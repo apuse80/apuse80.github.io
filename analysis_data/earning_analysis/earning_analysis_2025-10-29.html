@@ -1,0 +1,836 @@
+<!-- template.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📅 Earning Analysis @ 2025-10-29</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background-color: #1f1f1f;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        p.description {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #bbbbbb;
+        }
+        .red_font {
+            color: red;
+            font-weight: bold;
+        }
+        .blue_font {
+            color: blue;
+            font-weight: bold;
+        }
+        .green_font {
+            color: green;
+            font-weight: bold;
+        }
+        .yellow_font {
+            color: yellow;
+            font-weight: bold;
+        }
+        .plot {
+            margin-top: 30px;
+            width: 100%;
+            overflow-x: auto;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            p.description {
+                font-size: 1em;
+            }
+        }
+        .link_style {
+            text-decoration: none;
+            color: #bbbbbb;
+        }
+
+        .link_stype:visited {
+            color: #bbbbbb;
+         }
+
+        .link_style:hover {
+            color: #bbbbbb;
+        }
+        /* 플로팅 버튼 스타일 */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 50%;
+            padding: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .scroll-to-top:hover {
+            background-color: #45a049;
+        }
+        .scroll-to-top svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #1e1e1e;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #333;
+            text-align: center;
+        }
+        tr:nth-child(even) {
+            background-color: #2a2a2a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📅 Earning Analysis @ 2025-10-29</h1>
+<h2>✅ Earnings Calendar Reports<BR></h2>
+<h3>🔹 2025-10-28일 실적발표 기업 <BR></h3>
+<p class="description">- 2025-10-28일 185 기업이 실적발표를 합니다.<BR></p>
+<p class="description">>> My stocks</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>Name</th>
+      <th>Secor</th>
+      <th>Estimate EPS</th>
+      <th>Actual EPS</th>
+      <th>Surprise(%)</th>
+      <th>Volume Ratio(%)</th>
+      <th>1 day(%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GLW</td>
+      <td>Corning Incorporated<A href="https://www.tipranks.com/stocks/GLW" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>$0.66</td>
+      <td>$0.67</td>
+      <td>1.52</td>
+      <td>1.6</td>
+      <td>4.47</td>
+    </tr>
+  </tbody>
+</table><p class="description">>> 시총 기준 Top 5 주식</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>Name</th>
+      <th>Secor</th>
+      <th>Estimate EPS</th>
+      <th>Actual EPS</th>
+      <th>Surprise(%)</th>
+      <th>Volume Ratio(%)</th>
+      <th>1 day(%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>V</td>
+      <td>Visa Inc.<A href="https://www.tipranks.com/stocks/V" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>$2.97</td>
+      <td>$2.98</td>
+      <td>0.34</td>
+      <td>1.37</td>
+      <td>-1.62</td>
+    </tr>
+    <tr>
+      <td>UNH</td>
+      <td>UnitedHealth Group Incorporated<A href="https://www.tipranks.com/stocks/UNH" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>$2.75</td>
+      <td>$2.92</td>
+      <td>6.18</td>
+      <td>0.73</td>
+      <td>-3.42</td>
+    </tr>
+    <tr>
+      <td>HSBC</td>
+      <td>HSBC Holdings plc<A href="https://www.tipranks.com/stocks/HSBC" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>$1.65</td>
+      <td>$1.80</td>
+      <td>9.09</td>
+      <td>1.66</td>
+      <td>0.64</td>
+    </tr>
+    <tr>
+      <td>NVS</td>
+      <td>Novartis AG<A href="https://www.tipranks.com/stocks/NVS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>$2.26</td>
+      <td>$2.25</td>
+      <td>-0.44</td>
+      <td>1.67</td>
+      <td>-1.32</td>
+    </tr>
+    <tr>
+      <td>NEE</td>
+      <td>NextEra Energy, Inc.<A href="https://www.tipranks.com/stocks/NEE" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Utilities</td>
+      <td>$1.04</td>
+      <td>$1.13</td>
+      <td>8.65</td>
+      <td>0.89</td>
+      <td>-2.17</td>
+    </tr>
+  </tbody>
+</table><p class="description">>> Surprise 기준 Top 5 주식</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>Name</th>
+      <th>Secor</th>
+      <th>Estimate EPS</th>
+      <th>Actual EPS</th>
+      <th>Surprise(%)</th>
+      <th>Volume Ratio(%)</th>
+      <th>1 day(%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>RGEN</td>
+      <td>Repligen Corporation<A href="https://www.tipranks.com/stocks/RGEN" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>$0.42</td>
+      <td>$0.46</td>
+      <td>9.52</td>
+      <td>1.45</td>
+      <td>-2.04</td>
+    </tr>
+    <tr>
+      <td>MOD</td>
+      <td>Modine Manufacturing Company<A href="https://www.tipranks.com/stocks/MOD" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Cyclical</td>
+      <td>$0.97</td>
+      <td>$1.06</td>
+      <td>9.28</td>
+      <td>2.41</td>
+      <td>-4.17</td>
+    </tr>
+    <tr>
+      <td>HSBC</td>
+      <td>HSBC Holdings plc<A href="https://www.tipranks.com/stocks/HSBC" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>$1.65</td>
+      <td>$1.80</td>
+      <td>9.09</td>
+      <td>1.66</td>
+      <td>0.64</td>
+    </tr>
+    <tr>
+      <td>AMT</td>
+      <td>American Tower Corporation (REIT)<A href="https://www.tipranks.com/stocks/AMT" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Real Estate</td>
+      <td>$2.55</td>
+      <td>$2.78</td>
+      <td>9.02</td>
+      <td>1.53</td>
+      <td>-1.99</td>
+    </tr>
+    <tr>
+      <td>RRR</td>
+      <td>Red Rock Resorts, Inc.<A href="https://www.tipranks.com/stocks/RRR" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Cyclical</td>
+      <td>$0.36</td>
+      <td>$0.68</td>
+      <td>88.89</td>
+      <td>2.35</td>
+      <td>-11.73</td>
+    </tr>
+  </tbody>
+</table><p class="description">>> 거래량 기준 Top 5 주식</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>Name</th>
+      <th>Secor</th>
+      <th>Estimate EPS</th>
+      <th>Actual EPS</th>
+      <th>Surprise(%)</th>
+      <th>Volume Ratio(%)</th>
+      <th>1 day(%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LRN</td>
+      <td>Stride, Inc.<A href="https://www.tipranks.com/stocks/LRN" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Defensive</td>
+      <td>$1.23</td>
+      <td>$1.52</td>
+      <td>23.58</td>
+      <td>30.59</td>
+      <td>-54.37</td>
+    </tr>
+    <tr>
+      <td>VRNS</td>
+      <td>Varonis Systems, Inc.<A href="https://www.tipranks.com/stocks/VRNS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>($0.21)</td>
+      <td>($0.20)</td>
+      <td>4.76</td>
+      <td>20.41</td>
+      <td>-48.67</td>
+    </tr>
+    <tr>
+      <td>ZEUS</td>
+      <td>Olympic Steel, Inc.<A href="https://www.tipranks.com/stocks/ZEUS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Basic Materials</td>
+      <td></td>
+      <td>$0.19</td>
+      <td>N/A</td>
+      <td>15.75</td>
+      <td>23.42</td>
+    </tr>
+    <tr>
+      <td>RYI</td>
+      <td>Ryerson Holding Corporation<A href="https://www.tipranks.com/stocks/RYI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>$0.03</td>
+      <td>($0.46)</td>
+      <td>-1633.33</td>
+      <td>10.93</td>
+      <td>-5.60</td>
+    </tr>
+    <tr>
+      <td>TX</td>
+      <td>Ternium S.A.<A href="https://www.tipranks.com/stocks/TX" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Basic Materials</td>
+      <td>$0.78</td>
+      <td>$0.10</td>
+      <td>-87.18</td>
+      <td>6.22</td>
+      <td>-5.36</td>
+    </tr>
+  </tbody>
+</table><p class="description">>> 일일 등락 기준 Top 5 주식</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>Name</th>
+      <th>Secor</th>
+      <th>Estimate EPS</th>
+      <th>Actual EPS</th>
+      <th>Surprise(%)</th>
+      <th>Volume Ratio(%)</th>
+      <th>1 day(%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>FLS</td>
+      <td>Flowserve Corporation<A href="https://www.tipranks.com/stocks/FLS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>$0.80</td>
+      <td>$0.90</td>
+      <td>12.5</td>
+      <td>5.37</td>
+      <td>30.93</td>
+    </tr>
+    <tr>
+      <td>ZEUS</td>
+      <td>Olympic Steel, Inc.<A href="https://www.tipranks.com/stocks/ZEUS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Basic Materials</td>
+      <td></td>
+      <td>$0.19</td>
+      <td>N/A</td>
+      <td>15.75</td>
+      <td>23.42</td>
+    </tr>
+    <tr>
+      <td>TER</td>
+      <td>Teradyne, Inc.<A href="https://www.tipranks.com/stocks/TER" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>$0.78</td>
+      <td>$0.85</td>
+      <td>8.97</td>
+      <td>3.07</td>
+      <td>20.47</td>
+    </tr>
+    <tr>
+      <td>STX</td>
+      <td>Seagate Technology Holdings PLC<A href="https://www.tipranks.com/stocks/STX" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>$2.11</td>
+      <td>$2.51</td>
+      <td>18.96</td>
+      <td>2.42</td>
+      <td>19.11</td>
+    </tr>
+    <tr>
+      <td>MIR</td>
+      <td>Mirion Technologies, Inc.<A href="https://www.tipranks.com/stocks/MIR" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>$0.10</td>
+      <td>$0.11</td>
+      <td>10</td>
+      <td>2.55</td>
+      <td>18.10</td>
+    </tr>
+  </tbody>
+</table><h3>🔹 2025-10-29일 실적발표 기업 <BR></h3>
+<p class="description">- 2025-10-29일 280 기업이 실적발표를 합니다.<BR></p>
+<p class="description">>> My stocks</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>Name</th>
+      <th>Secor</th>
+      <th>Estimate EPS</th>
+      <th>Volume Ratio(%)</th>
+      <th>1 day(%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MSFT</td>
+      <td>Microsoft Corporation<A href="https://www.tipranks.com/stocks/MSFT" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>$3.65</td>
+      <td>1.49</td>
+      <td>-0.10</td>
+    </tr>
+    <tr>
+      <td>GOOG</td>
+      <td>Alphabet Inc.<A href="https://www.tipranks.com/stocks/GOOG" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Communication Services</td>
+      <td>$2.26</td>
+      <td>1.11</td>
+      <td>2.51</td>
+    </tr>
+  </tbody>
+</table><p class="description">>> 시총 기준 Top 5 주식</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>Name</th>
+      <th>Secor</th>
+      <th>Estimate EPS</th>
+      <th>Volume Ratio(%)</th>
+      <th>1 day(%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MSFT</td>
+      <td>Microsoft Corporation<A href="https://www.tipranks.com/stocks/MSFT" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>$3.65</td>
+      <td>1.49</td>
+      <td>-0.10</td>
+    </tr>
+    <tr>
+      <td>GOOGL</td>
+      <td>Alphabet Inc.<A href="https://www.tipranks.com/stocks/GOOGL" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Communication Services</td>
+      <td>$2.26</td>
+      <td>1.17</td>
+      <td>2.65</td>
+    </tr>
+    <tr>
+      <td>GOOG</td>
+      <td>Alphabet Inc.<A href="https://www.tipranks.com/stocks/GOOG" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Communication Services</td>
+      <td>$2.26</td>
+      <td>1.11</td>
+      <td>2.51</td>
+    </tr>
+    <tr>
+      <td>META</td>
+      <td>Meta Platforms, Inc.<A href="https://www.tipranks.com/stocks/META" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Communication Services</td>
+      <td>$6.61</td>
+      <td>1.52</td>
+      <td>0.03</td>
+    </tr>
+    <tr>
+      <td>CAT</td>
+      <td>Caterpillar, Inc.<A href="https://www.tipranks.com/stocks/CAT" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>$4.52</td>
+      <td>2.01</td>
+      <td>11.63</td>
+    </tr>
+  </tbody>
+</table><p class="description">>> 거래량 기준 Top 5 주식</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>Name</th>
+      <th>Secor</th>
+      <th>Estimate EPS</th>
+      <th>Volume Ratio(%)</th>
+      <th>1 day(%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>FI</td>
+      <td>Fiserv, Inc.<A href="https://www.tipranks.com/stocks/FI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>$2.64</td>
+      <td>23.20</td>
+      <td>-44.04</td>
+    </tr>
+    <tr>
+      <td>PUMP</td>
+      <td>ProPetro Holding Corp.<A href="https://www.tipranks.com/stocks/PUMP" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Energy</td>
+      <td>($0.11)</td>
+      <td>8.84</td>
+      <td>52.05</td>
+    </tr>
+    <tr>
+      <td>TOMZ</td>
+      <td>TOMI Environmental Solutions, Inc.<A href="https://www.tipranks.com/stocks/TOMZ" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>($0.01)</td>
+      <td>6.17</td>
+      <td>7.86</td>
+    </tr>
+    <tr>
+      <td>CLH</td>
+      <td>Clean Harbors, Inc.<A href="https://www.tipranks.com/stocks/CLH" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>$2.37</td>
+      <td>5.80</td>
+      <td>-11.48</td>
+    </tr>
+    <tr>
+      <td>FULC</td>
+      <td>Fulcrum Therapeutics, Inc.<A href="https://www.tipranks.com/stocks/FULC" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>($0.29)</td>
+      <td>5.49</td>
+      <td>-6.40</td>
+    </tr>
+  </tbody>
+</table><p class="description">>> 일일 등락 기준 Top 5 주식</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>Name</th>
+      <th>Secor</th>
+      <th>Estimate EPS</th>
+      <th>Volume Ratio(%)</th>
+      <th>1 day(%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PUMP</td>
+      <td>ProPetro Holding Corp.<A href="https://www.tipranks.com/stocks/PUMP" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Energy</td>
+      <td>($0.11)</td>
+      <td>8.84</td>
+      <td>52.05</td>
+    </tr>
+    <tr>
+      <td>PCSA</td>
+      <td>Processa Pharmaceuticals, Inc.<A href="https://www.tipranks.com/stocks/PCSA" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>($0.08)</td>
+      <td>2.20</td>
+      <td>23.27</td>
+    </tr>
+    <tr>
+      <td>AXGN</td>
+      <td>AxoGen, Inc.<A href="https://www.tipranks.com/stocks/AXGN" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>($0.02)</td>
+      <td>2.23</td>
+      <td>23.06</td>
+    </tr>
+    <tr>
+      <td>KEX</td>
+      <td>Kirby Corporation<A href="https://www.tipranks.com/stocks/KEX" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>$1.60</td>
+      <td>2.17</td>
+      <td>13.93</td>
+    </tr>
+    <tr>
+      <td>CNC</td>
+      <td>Centene Corporation<A href="https://www.tipranks.com/stocks/CNC" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>($0.21)</td>
+      <td>1.91</td>
+      <td>12.50</td>
+    </tr>
+  </tbody>
+</table><h3>🔹 2025-10-30일 실적발표 기업 <BR></h3>
+<p class="description">- 2025-10-30일 330 기업이 실적발표를 합니다.<BR></p>
+<p class="description">>> My stocks</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>Name</th>
+      <th>Secor</th>
+      <th>Estimate EPS</th>
+      <th>Volume Ratio(%)</th>
+      <th>1 day(%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>AAPL</td>
+      <td>Apple Inc.<A href="https://www.tipranks.com/stocks/AAPL" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>$1.73</td>
+      <td>0.79</td>
+      <td>0.26</td>
+    </tr>
+    <tr>
+      <td>AMZN</td>
+      <td>Amazon.com, Inc.<A href="https://www.tipranks.com/stocks/AMZN" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Cyclical</td>
+      <td>$1.58</td>
+      <td>1.09</td>
+      <td>0.46</td>
+    </tr>
+    <tr>
+      <td>COIN</td>
+      <td>Coinbase Global, Inc.<A href="https://www.tipranks.com/stocks/COIN" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>$1.03</td>
+      <td>0.75</td>
+      <td>-1.86</td>
+    </tr>
+    <tr>
+      <td>RDDT</td>
+      <td>Reddit, Inc.<A href="https://www.tipranks.com/stocks/RDDT" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Communication Services</td>
+      <td>$0.52</td>
+      <td>0.65</td>
+      <td>-1.03</td>
+    </tr>
+  </tbody>
+</table><p class="description">>> 시총 기준 Top 5 주식</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>Name</th>
+      <th>Secor</th>
+      <th>Estimate EPS</th>
+      <th>Volume Ratio(%)</th>
+      <th>1 day(%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>AAPL</td>
+      <td>Apple Inc.<A href="https://www.tipranks.com/stocks/AAPL" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>$1.73</td>
+      <td>0.79</td>
+      <td>0.26</td>
+    </tr>
+    <tr>
+      <td>AMZN</td>
+      <td>Amazon.com, Inc.<A href="https://www.tipranks.com/stocks/AMZN" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Cyclical</td>
+      <td>$1.58</td>
+      <td>1.09</td>
+      <td>0.46</td>
+    </tr>
+    <tr>
+      <td>LLY</td>
+      <td>Eli Lilly and Company<A href="https://www.tipranks.com/stocks/LLY" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>$6.02</td>
+      <td>0.69</td>
+      <td>-0.80</td>
+    </tr>
+    <tr>
+      <td>MA</td>
+      <td>Mastercard Incorporated<A href="https://www.tipranks.com/stocks/MA" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td>$4.31</td>
+      <td>1.40</td>
+      <td>-2.01</td>
+    </tr>
+    <tr>
+      <td>SHEL</td>
+      <td>Shell PLC<A href="https://www.tipranks.com/stocks/SHEL" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Energy</td>
+      <td>$1.72</td>
+      <td>1.69</td>
+      <td>0.64</td>
+    </tr>
+  </tbody>
+</table><p class="description">>> 거래량 기준 Top 5 주식</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>Name</th>
+      <th>Secor</th>
+      <th>Estimate EPS</th>
+      <th>Volume Ratio(%)</th>
+      <th>1 day(%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CPSH</td>
+      <td>CPS Technologies Corp.<A href="https://www.tipranks.com/stocks/CPSH" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td></td>
+      <td>4.78</td>
+      <td>9.20</td>
+    </tr>
+    <tr>
+      <td>LUMN</td>
+      <td>Lumen Technologies, Inc. <A href="https://www.tipranks.com/stocks/LUMN" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Communication Services</td>
+      <td>($0.31)</td>
+      <td>3.52</td>
+      <td>9.45</td>
+    </tr>
+    <tr>
+      <td>LCII</td>
+      <td>LCI Industries <A href="https://www.tipranks.com/stocks/LCII" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Cyclical</td>
+      <td>$1.46</td>
+      <td>3.45</td>
+      <td>-2.88</td>
+    </tr>
+    <tr>
+      <td>WERN</td>
+      <td>Werner Enterprises, Inc.<A href="https://www.tipranks.com/stocks/WERN" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>$0.15</td>
+      <td>3.09</td>
+      <td>-1.32</td>
+    </tr>
+    <tr>
+      <td>GCI</td>
+      <td>Gannett Co., Inc.<A href="https://www.tipranks.com/stocks/GCI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Communication Services</td>
+      <td></td>
+      <td>2.79</td>
+      <td>0.98</td>
+    </tr>
+  </tbody>
+</table><p class="description">>> 일일 등락 기준 Top 5 주식</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>Name</th>
+      <th>Secor</th>
+      <th>Estimate EPS</th>
+      <th>Volume Ratio(%)</th>
+      <th>1 day(%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>WDC</td>
+      <td>Western Digital Corporation<A href="https://www.tipranks.com/stocks/WDC" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>$1.47</td>
+      <td>2.06</td>
+      <td>13.18</td>
+    </tr>
+    <tr>
+      <td>LUMN</td>
+      <td>Lumen Technologies, Inc. <A href="https://www.tipranks.com/stocks/LUMN" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Communication Services</td>
+      <td>($0.31)</td>
+      <td>3.52</td>
+      <td>9.45</td>
+    </tr>
+    <tr>
+      <td>CPSH</td>
+      <td>CPS Technologies Corp.<A href="https://www.tipranks.com/stocks/CPSH" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td></td>
+      <td>4.78</td>
+      <td>9.20</td>
+    </tr>
+    <tr>
+      <td>ASX</td>
+      <td>ASE Technology Holding Co., Ltd.<A href="https://www.tipranks.com/stocks/ASX" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td></td>
+      <td>1.95</td>
+      <td>8.01</td>
+    </tr>
+    <tr>
+      <td>AXTI</td>
+      <td>AXT Inc<A href="https://www.tipranks.com/stocks/AXTI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>($0.14)</td>
+      <td>2.60</td>
+      <td>7.12</td>
+    </tr>
+  </tbody>
+</table><p class="description"><BR><BR>총 실행시간: 0:5:34</p>
+
+    </div>
+
+    <!-- 플로팅 버튼 -->
+    <button class="scroll-to-top" onclick="scrollToTop()" aria-label="맨 위로">
+    <!-- SVG 아이콘: 업 화살표 -->
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 4L4 12H9V20H15V12H20L12 4Z" fill="white"/>
+    </svg>
+    </button>
+    <script>
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    </script>
+</body>
+</html>
