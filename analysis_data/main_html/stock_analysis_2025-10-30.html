@@ -1,0 +1,159 @@
+<!-- template.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💻 Stock Analysis @ 2025-10-30 16:30:04</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background-color: #1f1f1f;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        p.description {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #bbbbbb;
+        }
+        .red_font {
+            color: red;
+            font-weight: bold;
+        }
+        .blue_font {
+            color: blue;
+            font-weight: bold;
+        }
+        .green_font {
+            color: green;
+            font-weight: bold;
+        }
+        .yellow_font {
+            color: yellow;
+            font-weight: bold;
+        }
+        .plot {
+            margin-top: 30px;
+            width: 100%;
+            overflow-x: auto;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            p.description {
+                font-size: 1em;
+            }
+        }
+        .link_style {
+            text-decoration: none;
+            color: #bbbbbb;
+        }
+
+        .link_stype:visited {
+            color: #bbbbbb;
+         }
+
+        .link_style:hover {
+            color: #bbbbbb;
+        }
+        /* 플로팅 버튼 스타일 */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 50%;
+            padding: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .scroll-to-top:hover {
+            background-color: #45a049;
+        }
+        .scroll-to-top svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #1e1e1e;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #333;
+            text-align: center;
+        }
+        tr:nth-child(even) {
+            background-color: #2a2a2a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💻 Stock Analysis @ 2025-10-30 16:30:04</h1>
+<h2>✅ 일정 분석 <A href="https://apuse80.github.io/analysis_data/schedule_analysis/schedule_analysis_2025-10-30.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description"><BR></p>
+<h2>✅ 실적 분석 <A href="https://apuse80.github.io/analysis_data/earning_analysis/earning_analysis_2025-10-30.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description"><BR></p>
+<h2>✅ 환율 분석 <A href="https://apuse80.github.io/analysis_data/exchange_analysis/exchange_analysis_2025-10-30.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description">현재 원 달러 환율은 <span class="yellow_font">1430.21원</span> 입니다. <BR><BR></p>
+<h2>✅ 채권 분석 <A href="https://apuse80.github.io/analysis_data/bond_analysis/bond_analysis_2025-10-30.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description">10 Year T-Note Yield: 4.08% (9bp 변동)<BR>30 Year T-Bond Yield: 4.61% (6bp 변동)<BR>적정 S&P500 PER: 24.51<BR>10yr US Treasury yield Curve는 우상향 하지 않습니다 (경기 상승기 아님). <BR>High Yield Spread 변동폭: -0.06bp<BR><BR></p>
+<h2>✅ 글로벌 시장 분석 <A href="https://apuse80.github.io/analysis_data/globalmarket_analysis/globalmarket_analysis_2025-10-30.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description"><BR></p>
+<h2>✅ 암호화폐 분석 <A href="https://apuse80.github.io/analysis_data/crypto_analysis/crypto_analysis_2025-10-30.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description">현재 Bitcoin 가격: &nbsp;106,942.01(-3.84% 변동)<BR> 금일 Bitcoin 거래량: 3개월 평균대비 116.69%<BR>현재 Ethereum 가격: &nbsp;3,708.02(-5.75% 변동)<BR> 금일 Ethereum 거래량: 3개월 평균대비 99.25%<BR><BR></p>
+<h2>✅ 매크로 분석 <A href="https://apuse80.github.io/analysis_data/macro_analysis/macro_analysis_2025-10-30.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description"><BR></p>
+<h2>✅ 원자재 분석 <A href="https://apuse80.github.io/analysis_data/commodities_analysis/commodities_analysis_2025-10-30.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description"><BR></p>
+<h2>✅ 주가 계절성 분석 <A href="https://apuse80.github.io/analysis_data/stock_seasonability/stock_seasonability_2025-10-30.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description"><BR></p>
+<h2>✅ S&P500 주식 분석 <A href="https://apuse80.github.io/analysis_data/sp500_analysis/sp500_analysis_2025-10-30.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description">현재 S&P500 trailing PER은 26.852, forward PER은 20.789 입니다.<BR><BR><BR></p>
+<p class="description"><BR><BR>총 실행시간: 0:18:28</p>
+
+    </div>
+
+    <!-- 플로팅 버튼 -->
+    <button class="scroll-to-top" onclick="scrollToTop()" aria-label="맨 위로">
+    <!-- SVG 아이콘: 업 화살표 -->
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 4L4 12H9V20H15V12H20L12 4Z" fill="white"/>
+    </svg>
+    </button>
+    <script>
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    </script>
+</body>
+</html>
