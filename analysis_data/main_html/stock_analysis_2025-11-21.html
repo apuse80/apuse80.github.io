@@ -1,0 +1,159 @@
+<!-- template.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💻 Stock Analysis @ 2025-11-21</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background-color: #1f1f1f;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        p.description {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #bbbbbb;
+        }
+        .red_font {
+            color: red;
+            font-weight: bold;
+        }
+        .blue_font {
+            color: blue;
+            font-weight: bold;
+        }
+        .green_font {
+            color: green;
+            font-weight: bold;
+        }
+        .yellow_font {
+            color: yellow;
+            font-weight: bold;
+        }
+        .plot {
+            margin-top: 30px;
+            width: 100%;
+            overflow-x: auto;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            p.description {
+                font-size: 1em;
+            }
+        }
+        .link_style {
+            text-decoration: none;
+            color: #bbbbbb;
+        }
+
+        .link_stype:visited {
+            color: #bbbbbb;
+         }
+
+        .link_style:hover {
+            color: #bbbbbb;
+        }
+        /* 플로팅 버튼 스타일 */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 50%;
+            padding: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .scroll-to-top:hover {
+            background-color: #45a049;
+        }
+        .scroll-to-top svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #1e1e1e;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #333;
+            text-align: center;
+        }
+        tr:nth-child(even) {
+            background-color: #2a2a2a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💻 Stock Analysis @ 2025-11-21</h1>
+<h2>✅ 일정 분석 <A href="https://apuse80.github.io/analysis_data/schedule_analysis/schedule_analysis_2025-11-21.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description">🔹 다음 GDP 수정치 발표일: 2025-11-26 (4일 남음)<BR><BR></p>
+<h2>✅ Sentiment 분석 <A href="https://apuse80.github.io/analysis_data/sentiment_analysis/sentiment_analysis_2025-11-21.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description">AAII Sentiment Survey는 향후 시장을  <span class="red_font">열세장 (Bearish > Bullish)</span>으로 보고 있습니다.<BR>Bearish sentiment가 <span class="red_font">40%</span>를 넘었습니다. (43.56%)<BR>금일 Vix 지수: Close:<span class="red_font">23.43</span> (전일대비 -2.99 point 변동), High:<span class="red_font">27.84</span><BR>VIX 지수가 <span class="yellow_font">20</span>을 넘었습니다. 예상 가능한 주가하락에 조심하세요.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;금일 MOVE 지수는 <span class="red_font">77.81</span> 입니다 (전일대비 -0.00 point 변동).<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;금일 S&P500 RSI는 <span>41.00</span> 입니다 (전일 대비 6.40 point 변동).<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;금일 S&P500 거래량은 3개월평균 거래량 대비 120.32% 입니다.<BR><BR></p>
+<h2>✅ 환율 분석 <A href="https://apuse80.github.io/analysis_data/exchange_analysis/exchange_analysis_2025-11-21.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description">현재 원 달러 환율은 <span class="yellow_font">1469.01원</span> 입니다. <BR><BR></p>
+<h2>✅ 채권 분석 <A href="https://apuse80.github.io/analysis_data/bond_analysis/bond_analysis_2025-11-21.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description">10 Year T-Note Yield: 4.10% (-3bp 변동)<BR>30 Year T-Bond Yield: 4.73% (-2bp 변동)<BR>적정 S&P500 PER: 24.39<BR>10yr US Treasury yield Curve는 우상향 하지 않습니다 (경기 상승기 아님). <BR>High yield spread: 3.17 (변동폭: 0.00bp)<BR></p>
+<h2>✅ 글로벌 시장 분석 <A href="https://apuse80.github.io/analysis_data/globalmarket_analysis/globalmarket_analysis_2025-11-21.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description">KR:KOSPI가 -5.85% 변동했습니다.<BR><BR></p>
+<h2>✅ 암호화폐 분석 <A href="https://apuse80.github.io/analysis_data/crypto_analysis/crypto_analysis_2025-11-21.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description">현재 Bitcoin 가격: &nbsp;84,957.54(-1.93% 변동)<BR> 금일 Bitcoin 거래량: 3개월 평균대비 200.53%<BR>현재 Ethereum 가격: &nbsp;2,762.22(-2.46% 변동)<BR> 금일 Ethereum 거래량: 3개월 평균대비 128.86%<BR><BR></p>
+<h2>✅ 매크로 분석 <A href="https://apuse80.github.io/analysis_data/macro_analysis/macro_analysis_2025-11-21.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description"><BR></p>
+<h2>✅ 원자재 분석 <A href="https://apuse80.github.io/analysis_data/commodities_analysis/commodities_analysis_2025-11-21.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description"><BR></p>
+<h2>✅ 주가 계절성 분석 <A href="https://apuse80.github.io/analysis_data/stock_seasonability/stock_seasonability_2025-11-21.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description"><BR></p>
+<h2>✅ 내 주식 분석 <A href="https://apuse80.github.io/analysis_data/mystock_analysis/mystock_analysis_2025-11-21.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description"> 금일 5% 이상 상승 종목:<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#TEM" class="link_style" rel="noopener noreferrer">TEM(7.00%)</A><BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#SATL" class="link_style" rel="noopener noreferrer">SATL(7.09%)</A><BR>🔹 금일 5% 이상 하락 종목:<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#ORCL" class="link_style" rel="noopener noreferrer">ORCL(-5.66%)</A><BR>🔹 현재 과매도 상태인 종목: <BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#DEFT" class="link_style" rel="noopener noreferrer">DEFT(20.51)</A><BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#MARA" class="link_style" rel="noopener noreferrer">MARA(20.68)</A><BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#SMR" class="link_style" rel="noopener noreferrer">SMR(26.65)</A><BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#APLD" class="link_style" rel="noopener noreferrer">APLD(29.97)</A><BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#BMNR" class="link_style" rel="noopener noreferrer">BMNR(27.72)</A><BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#ORCL" class="link_style" rel="noopener noreferrer">ORCL(25.15)</A><BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#COIN" class="link_style" rel="noopener noreferrer">COIN(28.78)</A><BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#ANET" class="link_style" rel="noopener noreferrer">ANET(26.86)</A><BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#MSFT" class="link_style" rel="noopener noreferrer">MSFT(27.92)</A><BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#NFLX" class="link_style" rel="noopener noreferrer">NFLX(8.19)</A><BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#SATL" class="link_style" rel="noopener noreferrer">SATL(28.61)</A><BR>🔹 현재 목표가를 초과한 종목: <BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#JOBY" class="link_style" rel="noopener noreferrer">JOBY(-4.36%)</A><BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#OSCR" class="link_style" rel="noopener noreferrer">OSCR(-4.49%)</A><BR>🔹 5일내 분석 레이팅이 변경된 종목: <BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#VERI" class="link_style" rel="noopener noreferrer">VERI(4일전 3->2)</A> 🔴<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#APLD" class="link_style" rel="noopener noreferrer">APLD(4일전 3->2)</A> 🔴<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#AFRM" class="link_style" rel="noopener noreferrer">AFRM(1일전 2->0)</A> 🔴<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#CRM" class="link_style" rel="noopener noreferrer">CRM(3일전 1->0)</A> 🔴<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#NVDA" class="link_style" rel="noopener noreferrer">NVDA(5일전 7->3)</A> 🔴<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#AMD" class="link_style" rel="noopener noreferrer">AMD(4일전 7->3)</A> 🔴<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#AMZN" class="link_style" rel="noopener noreferrer">AMZN(1일전 3->1)</A> 🔴<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#MSFT" class="link_style" rel="noopener noreferrer">MSFT(3일전 2->0)</A> 🔴<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#VRT" class="link_style" rel="noopener noreferrer">VRT(1일전 3->2)</A> 🔴<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#PLTR" class="link_style" rel="noopener noreferrer">PLTR(4일전 3->2)</A> 🔴<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#GLW" class="link_style" rel="noopener noreferrer">GLW(3일전 3->2)</A> 🔴<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#COST" class="link_style" rel="noopener noreferrer">COST(4일전 1->0)</A> 🔴<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#MRVL" class="link_style" rel="noopener noreferrer">MRVL(3일전 3->2)</A> 🔴<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#MDB" class="link_style" rel="noopener noreferrer">MDB(3일전 7->3)</A> 🔴<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#CRWD" class="link_style" rel="noopener noreferrer">CRWD(3일전 7->3)</A> 🔴<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#MU" class="link_style" rel="noopener noreferrer">MU(1일전 7->3)</A> 🔴<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#SOXL" class="link_style" rel="noopener noreferrer">SOXL(2일전 3->2)</A> 🔴<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#JOBY" class="link_style" rel="noopener noreferrer">JOBY(1일전 2->0)</A> 🔴<BR></p>
+<p class="description"><BR><BR>총 실행시간: 0:7:48</p>
+
+    </div>
+
+    <!-- 플로팅 버튼 -->
+    <button class="scroll-to-top" onclick="scrollToTop()" aria-label="맨 위로">
+    <!-- SVG 아이콘: 업 화살표 -->
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 4L4 12H9V20H15V12H20L12 4Z" fill="white"/>
+    </svg>
+    </button>
+    <script>
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    </script>
+</body>
+</html>
