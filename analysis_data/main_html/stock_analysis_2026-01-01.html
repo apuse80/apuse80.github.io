@@ -1,0 +1,163 @@
+<!-- template.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💻 Stock Analysis @ 2026-01-01</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background-color: #1f1f1f;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        p.description {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #bbbbbb;
+        }
+        .red_font {
+            color: red;
+            font-weight: bold;
+        }
+        .blue_font {
+            color: blue;
+            font-weight: bold;
+        }
+        .green_font {
+            color: green;
+            font-weight: bold;
+        }
+        .yellow_font {
+            color: yellow;
+            font-weight: bold;
+        }
+        .plot {
+            margin-top: 30px;
+            width: 100%;
+            overflow-x: auto;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            p.description {
+                font-size: 1em;
+            }
+        }
+        .link_style {
+            text-decoration: none;
+            color: #bbbbbb;
+        }
+
+        .link_stype:visited {
+            color: #bbbbbb;
+         }
+
+        .link_style:hover {
+            color: #bbbbbb;
+        }
+        /* 플로팅 버튼 스타일 */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 50%;
+            padding: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .scroll-to-top:hover {
+            background-color: #45a049;
+        }
+        .scroll-to-top svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #1e1e1e;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #333;
+            text-align: center;
+        }
+        tr:nth-child(even) {
+            background-color: #2a2a2a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💻 Stock Analysis @ 2026-01-01</h1>
+<h2>✅ 일정 분석 <A href="https://apuse80.github.io/analysis_data/schedule_analysis/schedule_analysis_2026-01-01.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description">🔹 <span class="red_font">오늘은 고용 보고일 입니다.</span><BR><BR></p>
+<h2>✅ 실적 분석 <A href="https://apuse80.github.io/analysis_data/earning_analysis/earning_analysis_2026-01-01.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description"><BR></p>
+<h2>✅ Sentiment 분석 <A href="https://apuse80.github.io/analysis_data/sentiment_analysis/sentiment_analysis_2026-01-01.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description">AAII Sentiment Survey (sentiment260101.xls) 파일이 존재하지 않습니다. <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;엑셀 파일을 <A href="https://www.aaii.com/sentimentsurvey/sent_results" class="link_style" target="_blank" rel="noopener noreferrer">AAII 🏠</A> 에서 다운받으세요.<BR>금일 Vix 지수: Close:<span class="green_font">14.95</span> (전일대비 0.62 point 변동), High:<span class="green_font">15.17</span><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;금일 MOVE 지수는 <span class="red_font">63.98</span> 입니다 (전일대비 -0.00 point 변동).<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;금일 S&P500 RSI는 <span>51.03</span> 입니다 (전일 대비 -5.91 point 변동).<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;금일 S&P500 거래량은 3개월평균 거래량 대비 32.91% 입니다.<BR><BR></p>
+<h2>✅ 환율 분석 <A href="https://apuse80.github.io/analysis_data/exchange_analysis/exchange_analysis_2026-01-01.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description">현재 원 달러 환율은 <span class="yellow_font">1442.17원</span> 입니다. <BR><BR></p>
+<h2>✅ 채권 분석 <A href="https://apuse80.github.io/analysis_data/bond_analysis/bond_analysis_2026-01-01.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description">10 Year T-Note Yield: 4.14% (2bp 변동)<BR>30 Year T-Bond Yield: 4.81% (1bp 변동)<BR>적정 S&P500 PER: 24.15<BR>10yr US Treasury yield Curve는 우상향 하지 않습니다 (경기 상승기 아님). <BR><BR></p>
+<h2>✅ 글로벌 시장 분석 <A href="https://apuse80.github.io/analysis_data/globalmarket_analysis/globalmarket_analysis_2026-01-01.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description"><BR></p>
+<h2>✅ 암호화폐 분석 <A href="https://apuse80.github.io/analysis_data/crypto_analysis/crypto_analysis_2026-01-01.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description">현재 Bitcoin 가격: &nbsp;88,364.86(-0.07% 변동)<BR> 금일 Bitcoin 거래량: 3개월 평균대비 59.38%<BR>현재 Ethereum 가격: &nbsp;2,970.82(-0.02% 변동)<BR> 금일 Ethereum 거래량: 3개월 평균대비 62.05%<BR><BR></p>
+<h2>✅ 매크로 분석 <A href="https://apuse80.github.io/analysis_data/macro_analysis/macro_analysis_2026-01-01.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description">⚠️ 실업률이 4.5%를 넘었습니다. 향후 주가 하락에 대비하세요.<BR>신규 실업 수당 청구 건수: 199000건 (-7.44% 변동, 발표일: 2025-12-27)<BR>연속 실업 수당 청구 건수: 1866000건 (-2.46% 변동, 발표일: 2025-12-20)<BR>금일 오버나이트 레포 거래량이 31.5 입니다. 단기 유동성 리스크 주의!<BR><BR></p>
+<h2>✅ 원자재 분석 <A href="https://apuse80.github.io/analysis_data/commodities_analysis/commodities_analysis_2026-01-01.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description">🔹 금일 KRX 금 가격: 미국 시장 금 가격 대비 1.51% 차이<BR><BR></p>
+<h2>✅ ETF 분석 <A href="https://apuse80.github.io/analysis_data/etf_analysis/etf_analysis_2026-01-01.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description">MAGSX: RSI 과매도 구간 진입 (27.04)<BR><BR></p>
+<h2>✅ S&P500 주식 분석 <A href="https://apuse80.github.io/analysis_data/sp500_analysis/sp500_analysis_2026-01-01.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description">현재 S&P500 trailing PER은 27.166, forward PER은 19.917 입니다. 현재 S&P500 PER은 <span class="green_font">낮은 밸류에이션 </span>상태에 있습니다.<BR><BR><BR></p>
+<h2>✅ 내 주식 분석 <A href="https://apuse80.github.io/analysis_data/mystock_analysis/mystock_analysis_2026-01-01.html" class="link_style" target="_blank" rel="noopener noreferrer">📊</A><BR></h2>
+<p class="description"> 금일 5% 이상 하락 종목:<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#DEFT" class="link_style" rel="noopener noreferrer">DEFT(-6.72%)</A><BR>🔹 현재 과매도 상태인 종목: <BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#SMR" class="link_style" rel="noopener noreferrer">SMR(29.47)</A><BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#MARA" class="link_style" rel="noopener noreferrer">MARA(27.08)</A><BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#TEM" class="link_style" rel="noopener noreferrer">TEM(28.10)</A><BR>🔹 현재 목표가를 초과한 종목: <BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#JOBY" class="link_style" rel="noopener noreferrer">JOBY(-8.01%)</A><BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#TSLA" class="link_style" rel="noopener noreferrer">TSLA(-11.24%)</A><BR>🔹 5일내 분석 레이팅이 변경된 종목: <BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#VERI" class="link_style" rel="noopener noreferrer">VERI(3일전 7->3)</A> 🔴<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#APLD" class="link_style" rel="noopener noreferrer">APLD(2일전 2->3)</A> 🟢<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#MRVL" class="link_style" rel="noopener noreferrer">MRVL(2일전 2->3)</A> 🟢<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#NVDA" class="link_style" rel="noopener noreferrer">NVDA(5일전 0->2)</A> 🟢<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#AMD" class="link_style" rel="noopener noreferrer">AMD(4일전 2->6)</A> 🟢<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#AVGO" class="link_style" rel="noopener noreferrer">AVGO(5일전 3->2)</A> 🔴<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#AMZN" class="link_style" rel="noopener noreferrer">AMZN(3일전 2->6)</A> 🟢<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#ANET" class="link_style" rel="noopener noreferrer">ANET(2일전 0->1)</A> 🟢<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#AFRM" class="link_style" rel="noopener noreferrer">AFRM(1일전 3->1)</A> 🔴<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#CEG" class="link_style" rel="noopener noreferrer">CEG(1일전 7->3)</A> 🔴<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#POET" class="link_style" rel="noopener noreferrer">POET(2일전 3->7)</A> 🟢<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#RDDT" class="link_style" rel="noopener noreferrer">RDDT(1일전 5->7)</A> 🟢<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#GOOG" class="link_style" rel="noopener noreferrer">GOOG(4일전 3->7)</A> 🟢<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#OSCR" class="link_style" rel="noopener noreferrer">OSCR(5일전 0->1)</A> 🟢<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#SOXL" class="link_style" rel="noopener noreferrer">SOXL(5일전 3->7)</A> 🟢<BR> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-<A href="#URAN" class="link_style" rel="noopener noreferrer">URAN(1일전 2->3)</A> 🟢<BR></p>
+<p class="description"><BR><BR>총 실행시간: 1:39:43</p>
+
+    </div>
+
+    <!-- 플로팅 버튼 -->
+    <button class="scroll-to-top" onclick="scrollToTop()" aria-label="맨 위로">
+    <!-- SVG 아이콘: 업 화살표 -->
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 4L4 12H9V20H15V12H20L12 4Z" fill="white"/>
+    </svg>
+    </button>
+    <script>
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    </script>
+</body>
+</html>
