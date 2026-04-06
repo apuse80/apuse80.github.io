@@ -1,0 +1,712 @@
+<!-- template.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📅 Earning Analysis @ 2026-04-06</title>
+    <style>
+        :root {
+            --bg: #0b1020;
+            --bg2: #111827;
+            --card: #151d31;
+            --card-soft: #1b2640;
+            --text: #e6edf7;
+            --muted: #b8c2d9;
+            --line: #2a3553;
+            --accent: #64b5f6;
+            --accent2: #7c4dff;
+            --green: #34d399;
+            --red: #f87171;
+            --yellow: #facc15;
+        }
+
+        body {
+            margin: 0;
+            padding: 24px;
+            font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: radial-gradient(1200px 600px at 20% -10%, #1f3a8a33, transparent),
+                        radial-gradient(900px 500px at 90% 0%, #7c4dff22, transparent),
+                        linear-gradient(180deg, var(--bg), var(--bg2));
+            color: var(--text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 26px;
+            background: linear-gradient(180deg, #1a233a, #141c2f);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(4px);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+            color: #ffffff;
+            margin: 4px 0 22px;
+            letter-spacing: 0.2px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+            display: block;
+            background: linear-gradient(180deg, #1f2c4a, #1a2642);
+            border: 1px solid var(--line);
+            border-left: 4px solid var(--accent);
+            border-radius: 12px;
+            padding: 14px 16px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        h2, h3 {
+            color: #dbe7ff;
+            margin-top: 22px;
+            margin-bottom: 10px;
+        }
+
+        p, li {
+            line-height: 1.65;
+            color: var(--muted);
+        }
+
+        p.description {
+            font-size: 1.1em;
+            color: #c8d3ea;
+            background: var(--card-soft);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 14px 16px;
+        }
+
+        .red_font {
+            color: var(--red);
+            font-weight: bold;
+        }
+
+        .blue_font {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .green_font {
+            color: var(--green);
+            font-weight: bold;
+        }
+
+        .yellow_font {
+            color: var(--yellow);
+            font-weight: bold;
+        }
+
+        .plot {
+            margin-top: 26px;
+            width: 100%;
+            overflow-x: auto;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: #0e1629;
+            padding: 8px;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid var(--line);
+            margin: 22px 0;
+        }
+
+        code {
+            background: #101a30;
+            border: 1px solid #273657;
+            color: #d9e5ff;
+            border-radius: 6px;
+            padding: 0.15em 0.45em;
+        }
+
+        pre {
+            background: #0f172a;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 12px;
+            overflow-x: auto;
+        }
+
+        a, .link_style {
+            text-decoration: none;
+            color: #c8dbff;
+            transition: color 0.2s ease;
+        }
+
+        a:visited, .link_style:visited {
+            color: #bcd2ff;
+        }
+
+        a:hover, .link_style:hover {
+            color: #ffffff;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 14px;
+                border-radius: 12px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            p.description {
+                font-size: 1em;
+            }
+
+            .plot {
+                padding: 4px;
+            }
+        }
+
+        /* floating button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            background: linear-gradient(135deg, #4f46e5, #2563eb);
+            border: none;
+            border-radius: 50%;
+            padding: 16px;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+            transition: transform 0.2s ease, filter 0.2s ease, opacity 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
+
+        .scroll-to-top svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 10px 12px;
+            border: 1px solid var(--line);
+            text-align: center;
+        }
+
+        th {
+            background: #1d2a45;
+            color: #e8efff;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        tr:nth-child(even) {
+            background-color: #17213a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📅 Earning Analysis @ 2026-04-06</h1>
+<h2>✅ Earnings Calendar Reports<BR></h2>
+<h3>🔹 2026-04-02일 실적발표 기업 (7 회사)  <BR></h3>
+<p class="description">My stocks (1)</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>Name</th>
+      <th>Secor</th>
+      <th>Estimate EPS</th>
+      <th>Actual EPS</th>
+      <th>Surprise(%)</th>
+      <th>Volume Ratio(%)</th>
+      <th>1 day(%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DEFT</td>
+      <td>Defi Technologies, Inc.<A href="https://www.tipranks.com/stocks/DEFT" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td></td>
+      <td>$0.08</td>
+      <td>N/A</td>
+      <td>5.1</td>
+      <td><span class="green_font">8.75</span></td>
+    </tr>
+  </tbody>
+</table><BR><BR><p class="description">시총 기준 Top 5 주식</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>Name</th>
+      <th>Secor</th>
+      <th>Estimate EPS</th>
+      <th>Actual EPS</th>
+      <th>Surprise(%)</th>
+      <th>Volume Ratio(%)</th>
+      <th>1 day(%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>AYI</td>
+      <td>Acuity Inc.<A href="https://www.tipranks.com/stocks/AYI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>$3.70</td>
+      <td>$3.82</td>
+      <td><span class="green_font">3.24</span></td>
+      <td>1.21</td>
+      <td><span class="green_font">1.06</span></td>
+    </tr>
+    <tr>
+      <td>PHVS</td>
+      <td>Pharvaris N.V.<A href="https://www.tipranks.com/stocks/PHVS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td></td>
+      <td>($0.84)</td>
+      <td>N/A</td>
+      <td>1.74</td>
+      <td><span class="red_font">-0.67</span></td>
+    </tr>
+    <tr>
+      <td>LNN</td>
+      <td>Lindsay Corporation<A href="https://www.tipranks.com/stocks/LNN" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>$1.60</td>
+      <td>$1.15</td>
+      <td><span class="red_font">-28.13</span></td>
+      <td>2.50</td>
+      <td><span class="red_font">-0.10</span></td>
+    </tr>
+    <tr>
+      <td>TMQ</td>
+      <td>Trilogy Metals Inc.<A href="https://www.tipranks.com/stocks/TMQ" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Basic Materials</td>
+      <td>($0.01)</td>
+      <td>($0.03)</td>
+      <td><span class="red_font">-200.00</span></td>
+      <td>0.44</td>
+      <td><span class="green_font">1.59</span></td>
+    </tr>
+    <tr>
+      <td>ANGO</td>
+      <td>AngioDynamics, Inc.<A href="https://www.tipranks.com/stocks/ANGO" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>($0.11)</td>
+      <td>($0.07)</td>
+      <td><span class="green_font">36.36</span></td>
+      <td>2.12</td>
+      <td><span class="red_font">-4.56</span></td>
+    </tr>
+  </tbody>
+</table><BR><BR><p class="description">Surprise 기준 Top 5 주식</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>Name</th>
+      <th>Secor</th>
+      <th>Estimate EPS</th>
+      <th>Actual EPS</th>
+      <th>Surprise(%)</th>
+      <th>Volume Ratio(%)</th>
+      <th>1 day(%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LNN</td>
+      <td>Lindsay Corporation<A href="https://www.tipranks.com/stocks/LNN" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>$1.60</td>
+      <td>$1.15</td>
+      <td><span class="red_font">-28.13</span></td>
+      <td>2.50</td>
+      <td><span class="red_font">-0.10</span></td>
+    </tr>
+    <tr>
+      <td>TMQ</td>
+      <td>Trilogy Metals Inc.<A href="https://www.tipranks.com/stocks/TMQ" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Basic Materials</td>
+      <td>($0.01)</td>
+      <td>($0.03)</td>
+      <td><span class="red_font">-200.00</span></td>
+      <td>0.44</td>
+      <td><span class="green_font">1.59</span></td>
+    </tr>
+    <tr>
+      <td>ANGO</td>
+      <td>AngioDynamics, Inc.<A href="https://www.tipranks.com/stocks/ANGO" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>($0.11)</td>
+      <td>($0.07)</td>
+      <td><span class="green_font">36.36</span></td>
+      <td>2.12</td>
+      <td><span class="red_font">-4.56</span></td>
+    </tr>
+    <tr>
+      <td>AYI</td>
+      <td>Acuity Inc.<A href="https://www.tipranks.com/stocks/AYI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>$3.70</td>
+      <td>$3.82</td>
+      <td><span class="green_font">3.24</span></td>
+      <td>1.21</td>
+      <td><span class="green_font">1.06</span></td>
+    </tr>
+  </tbody>
+</table><BR><BR><p class="description">거래량 기준 Top 5 주식</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>Name</th>
+      <th>Secor</th>
+      <th>Estimate EPS</th>
+      <th>Actual EPS</th>
+      <th>Surprise(%)</th>
+      <th>Volume Ratio(%)</th>
+      <th>1 day(%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DEFT</td>
+      <td>Defi Technologies, Inc.<A href="https://www.tipranks.com/stocks/DEFT" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td></td>
+      <td>$0.08</td>
+      <td>N/A</td>
+      <td>5.10</td>
+      <td><span class="green_font">8.75</span></td>
+    </tr>
+    <tr>
+      <td>LNN</td>
+      <td>Lindsay Corporation<A href="https://www.tipranks.com/stocks/LNN" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>$1.60</td>
+      <td>$1.15</td>
+      <td><span class="red_font">-28.13</span></td>
+      <td>2.50</td>
+      <td><span class="red_font">-0.10</span></td>
+    </tr>
+    <tr>
+      <td>ANGO</td>
+      <td>AngioDynamics, Inc.<A href="https://www.tipranks.com/stocks/ANGO" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>($0.11)</td>
+      <td>($0.07)</td>
+      <td><span class="green_font">36.36</span></td>
+      <td>2.12</td>
+      <td><span class="red_font">-4.56</span></td>
+    </tr>
+    <tr>
+      <td>PHVS</td>
+      <td>Pharvaris N.V.<A href="https://www.tipranks.com/stocks/PHVS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td></td>
+      <td>($0.84)</td>
+      <td>N/A</td>
+      <td>1.74</td>
+      <td><span class="red_font">-0.67</span></td>
+    </tr>
+    <tr>
+      <td>AYI</td>
+      <td>Acuity Inc.<A href="https://www.tipranks.com/stocks/AYI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>$3.70</td>
+      <td>$3.82</td>
+      <td><span class="green_font">3.24</span></td>
+      <td>1.21</td>
+      <td><span class="green_font">1.06</span></td>
+    </tr>
+  </tbody>
+</table><BR><BR><p class="description">일일 등락 기준 Top 5 주식</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>Name</th>
+      <th>Secor</th>
+      <th>Estimate EPS</th>
+      <th>Actual EPS</th>
+      <th>Surprise(%)</th>
+      <th>Volume Ratio(%)</th>
+      <th>1 day(%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ANGO</td>
+      <td>AngioDynamics, Inc.<A href="https://www.tipranks.com/stocks/ANGO" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td>($0.11)</td>
+      <td>($0.07)</td>
+      <td><span class="green_font">36.36</span></td>
+      <td>2.12</td>
+      <td><span class="red_font">-4.56</span></td>
+    </tr>
+    <tr>
+      <td>AIRS</td>
+      <td>AirSculpt Technologies, Inc.<A href="https://www.tipranks.com/stocks/AIRS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td></td>
+      <td>$0.02</td>
+      <td>N/A</td>
+      <td>0.63</td>
+      <td><span class="red_font">-2.21</span></td>
+    </tr>
+    <tr>
+      <td>PHVS</td>
+      <td>Pharvaris N.V.<A href="https://www.tipranks.com/stocks/PHVS" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Healthcare</td>
+      <td></td>
+      <td>($0.84)</td>
+      <td>N/A</td>
+      <td>1.74</td>
+      <td><span class="red_font">-0.67</span></td>
+    </tr>
+    <tr>
+      <td>LNN</td>
+      <td>Lindsay Corporation<A href="https://www.tipranks.com/stocks/LNN" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>$1.60</td>
+      <td>$1.15</td>
+      <td><span class="red_font">-28.13</span></td>
+      <td>2.50</td>
+      <td><span class="red_font">-0.10</span></td>
+    </tr>
+    <tr>
+      <td>DEFT</td>
+      <td>Defi Technologies, Inc.<A href="https://www.tipranks.com/stocks/DEFT" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Financial Services</td>
+      <td></td>
+      <td>$0.08</td>
+      <td>N/A</td>
+      <td>5.10</td>
+      <td><span class="green_font">8.75</span></td>
+    </tr>
+  </tbody>
+</table><BR><BR><h3>🔹 2026-04-06일 실적발표 기업 (0 회사) <BR></h3>
+<h3>🔹 2026-04-07일 실적발표 기업 (7 회사)  <BR></h3>
+<p class="description">시총 기준 Top 5 주식</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>Name</th>
+      <th>Secor</th>
+      <th>Estimate EPS</th>
+      <th>Volume Ratio(%)</th>
+      <th>1 day(%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LEVI</td>
+      <td>Levi Strauss & Co.<A href="https://www.tipranks.com/stocks/LEVI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Cyclical</td>
+      <td>$0.37</td>
+      <td>1.18</td>
+      <td><span class="green_font">3.97</span></td>
+    </tr>
+    <tr>
+      <td>AEHR</td>
+      <td>Aehr Test Systems<A href="https://www.tipranks.com/stocks/AEHR" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>($0.14)</td>
+      <td>4.75</td>
+      <td><span class="green_font">17.69</span></td>
+    </tr>
+    <tr>
+      <td>GBX</td>
+      <td>Greenbrier Companies, Inc. (The)<A href="https://www.tipranks.com/stocks/GBX" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>$0.98</td>
+      <td>2.79</td>
+      <td><span class="red_font">-8.30</span></td>
+    </tr>
+    <tr>
+      <td>PXED</td>
+      <td>Phoenix Education Partners, Inc.<A href="https://www.tipranks.com/stocks/PXED" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Defensive</td>
+      <td>$0.34</td>
+      <td>0.85</td>
+      <td><span class="green_font">0.48</span></td>
+    </tr>
+    <tr>
+      <td>VLGEA</td>
+      <td>Village Super Market, Inc.<A href="https://www.tipranks.com/stocks/VLGEA" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Defensive</td>
+      <td></td>
+      <td>1.61</td>
+      <td><span class="green_font">0.16</span></td>
+    </tr>
+  </tbody>
+</table><BR><BR><p class="description">거래량 기준 Top 5 주식</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>Name</th>
+      <th>Secor</th>
+      <th>Estimate EPS</th>
+      <th>Volume Ratio(%)</th>
+      <th>1 day(%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>AEHR</td>
+      <td>Aehr Test Systems<A href="https://www.tipranks.com/stocks/AEHR" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>($0.14)</td>
+      <td>4.75</td>
+      <td><span class="green_font">17.69</span></td>
+    </tr>
+    <tr>
+      <td>GBX</td>
+      <td>Greenbrier Companies, Inc. (The)<A href="https://www.tipranks.com/stocks/GBX" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>$0.98</td>
+      <td>2.79</td>
+      <td><span class="red_font">-8.30</span></td>
+    </tr>
+    <tr>
+      <td>VLGEA</td>
+      <td>Village Super Market, Inc.<A href="https://www.tipranks.com/stocks/VLGEA" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Defensive</td>
+      <td></td>
+      <td>1.61</td>
+      <td><span class="green_font">0.16</span></td>
+    </tr>
+    <tr>
+      <td>XELB</td>
+      <td>Xcel Brands, Inc<A href="https://www.tipranks.com/stocks/XELB" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Cyclical</td>
+      <td></td>
+      <td>1.40</td>
+      <td><span class="green_font">13.24</span></td>
+    </tr>
+    <tr>
+      <td>LEVI</td>
+      <td>Levi Strauss & Co.<A href="https://www.tipranks.com/stocks/LEVI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Cyclical</td>
+      <td>$0.37</td>
+      <td>1.18</td>
+      <td><span class="green_font">3.97</span></td>
+    </tr>
+  </tbody>
+</table><BR><BR><p class="description">일일 등락 기준 Top 5 주식</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Ticker</th>
+      <th>Name</th>
+      <th>Secor</th>
+      <th>Estimate EPS</th>
+      <th>Volume Ratio(%)</th>
+      <th>1 day(%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>GBX</td>
+      <td>Greenbrier Companies, Inc. (The)<A href="https://www.tipranks.com/stocks/GBX" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Industrials</td>
+      <td>$0.98</td>
+      <td>2.79</td>
+      <td><span class="red_font">-8.30</span></td>
+    </tr>
+    <tr>
+      <td>LEVI</td>
+      <td>Levi Strauss & Co.<A href="https://www.tipranks.com/stocks/LEVI" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Cyclical</td>
+      <td>$0.37</td>
+      <td>1.18</td>
+      <td><span class="green_font">3.97</span></td>
+    </tr>
+    <tr>
+      <td>SKIL</td>
+      <td>Skillsoft Corp.<A href="https://www.tipranks.com/stocks/SKIL" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Defensive</td>
+      <td>$0.94</td>
+      <td>0.21</td>
+      <td><span class="green_font">3.03</span></td>
+    </tr>
+    <tr>
+      <td>AEHR</td>
+      <td>Aehr Test Systems<A href="https://www.tipranks.com/stocks/AEHR" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Technology</td>
+      <td>($0.14)</td>
+      <td>4.75</td>
+      <td><span class="green_font">17.69</span></td>
+    </tr>
+    <tr>
+      <td>XELB</td>
+      <td>Xcel Brands, Inc<A href="https://www.tipranks.com/stocks/XELB" class="link_style" target="_blank" rel="noopener noreferrer">🎯</A></td>
+      <td>Consumer Cyclical</td>
+      <td></td>
+      <td>1.40</td>
+      <td><span class="green_font">13.24</span></td>
+    </tr>
+  </tbody>
+</table><BR><BR><p class="description">총 실행시간: 0:0:10</p>
+
+    </div>
+
+    <!-- floating button -->
+    <button class="scroll-to-top" onclick="scrollToTop()" aria-label="맨 위로">
+    <!-- SVG icon: up arrow -->
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 4L4 12H9V20H15V12H20L12 4Z" fill="white"/>
+    </svg>
+    </button>
+    <script>
+    const scrollTopBtn = document.querySelector('.scroll-to-top');
+
+    function toggleScrollButton() {
+        if (!scrollTopBtn) return;
+        const shouldShow = window.scrollY > 320;
+        scrollTopBtn.classList.toggle('visible', shouldShow);
+    }
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.addEventListener('scroll', toggleScrollButton, { passive: true });
+    window.addEventListener('load', toggleScrollButton);
+    </script>
+</body>
+</html>
